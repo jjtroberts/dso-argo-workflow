@@ -47,13 +47,15 @@ type: kubernetes.io/dockerconfigjson
 - How to differentiate findings that belong to the base image versus those that belong to the application image.
 
 ## Outcomes
-We **require** a database (not sure relational or nosql) to track what findings belong to which layer. I'd say just use VAT to filter out findings that belong to the base images, but the API requires AppGate SDP to access so that's not feasible for a service account. And I doubt P1 will provide an SLA, backwards compatibility with their API changes, or even allow us to utilize VAT's api in this way. Regardless, Rackner's Scan-as-a-service should not be dependent upon anything but registry1.dso.mil for Iron Bank image pulls.
+We **require** a database (not sure relational or nosql) to track what findings belong to which layer. I'd say just use VAT to filter out findings that belong to the base images, but the API requires AppGate SDP to access so that's not feasible for a service account. And I doubt P1 will provide an SLA, backwards compatibility with their API changes, or even allow VAT's api to be used in this way.
 
 A better approach might be to use Cloud Build and export the syft.json, grype.json, and trivy.json files to Cloud Storage to then trigger a load of that json+schema into BigQuery where analytics could be run on it, and perhaps use Data Studio for reporting.
 
 See: https://cloud.google.com/bigquery/docs/samples/bigquery-load-table-gcs-json#bigquery_load_table_gcs_json-python
 
 We could have an automated process that parses a list of base images (UBI8, Java, Python, etc) we want to track, and scans those 2-3 times per day; continuously updating findings in BigQuery. Then when we scan a customer's image we can filter out findings that come from the base layer.
+
+Similar functionality can also be found at AWS.
 
 ## Potential JSON Schema Example
 TODO: Identify common output format
