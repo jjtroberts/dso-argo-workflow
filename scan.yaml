@@ -1,0 +1,184 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Workflow
+metadata:
+  generateName: dag-scan-
+spec:
+  entrypoint: scan
+
+  securityContext:
+    runAsUser: 0
+
+  imagePullSecrets:
+    - name: registry1
+
+  volumes:
+    - name: init-setup
+      emptyDir: {}
+    - name: task-pv-storage
+      persistentVolumeClaim:
+        claimName: task-pv-claim
+    - name: registry1
+      secret:
+        secretName: registry1
+
+  templates:
+
+  ## START TEMPLATES ##
+
+  # trufflehog?
+
+  # openscap/openscap (skip if Distroless)
+  # probably need a RHEL host for this
+  # Nope: oscap-podman is available only on Fedora and Red Hat Enterprise Linux 8 or newer. 
+  #   On other systems use oscap-docker instead.
+  # apt-get install libopenscap8
+
+
+  # skopeo was a failure, but leaving for reference
+  - name: skopeo
+    inputs:
+      parameters:
+      - name: scan-image
+    container:
+      image: quay.io/skopeo/stable:v1.7.0
+      command: [
+        "skopeo",
+        "copy",
+        "--authfile=/credentials/.dockerconfigjson",
+        "--remove-signatures",
+        "docker://{{inputs.parameters.scan-image}}",
+        "dir:/data/skopeo/image"
+      ]
+      volumeMounts:
+        - mountPath: "/data/skopeo"
+          name: task-pv-storage
+        - name: registry1
+          mountPath: "/credentials"
+
+  # 2m
+  - name: syft
+    inputs:
+      parameters:
+      - name: scan-image
+    container:
+      image: anchore/syft:v0.45.1
+      command: [
+        "/syft", 
+        "-v", 
+        "packages", 
+        "{{inputs.parameters.scan-image}}", 
+        "-o", "json", 
+        "--file", "/data/syft.json"
+      ]
+      env:
+        - name: DOCKER_CONFIG
+          value: "/credentials"
+      volumeMounts:
+        - mountPath: "/data"
+          name: task-pv-storage
+        - name: registry1
+          mountPath: "/credentials"
+
+  # 1m
+  - name: grype
+    container:
+      image: anchore/grype:v0.35.0
+      command: [
+        "/grype", 
+        "-v", 
+        "sbom:/data/syft.json", 
+        "-o", "json",  
+        "--file", "/data/grype.json"
+      ]
+      env:
+        - name: DOCKER_CONFIG
+          value: "/credentials"
+      volumeMounts:
+        - mountPath: "/data"
+          name: task-pv-storage
+        - name: registry1
+          mountPath: "/credentials"
+          readOnly: true
+
+  # 1m
+  - name: trivy
+    inputs:
+      parameters:
+      - name: scan-image
+    container:
+      image: aquasec/trivy:0.27.1
+      command: [
+        "/usr/local/bin/trivy", 
+        "image", 
+        "-f", "json", 
+        "-o", "/data/trivy.json", 
+        "{{inputs.parameters.scan-image}}"]
+      env:
+        - name: DOCKER_CONFIG
+          value: "/credentials"
+      volumeMounts:
+        - mountPath: "/data"
+          name: task-pv-storage
+        - name: registry1
+          mountPath: "/credentials"
+          readOnly: true
+
+  # 5m
+  - name: openscap
+    container:
+      image: registry1.dso.mil/ironbank/opensource/goharbor/harbor-registryctl:v2.5.0
+      command:
+        - bash
+        - -c
+        - |
+          dnf install -y --nodocs openscap-scanner bzip2 wget unzip && \
+          wget https://github.com/ComplianceAsCode/content/releases/download/v0.1.61/scap-security-guide-0.1.61-oval-5.10.zip && \
+          unzip scap-security-guide-0.1.61-oval-5.10.zip && \
+          oscap xccdf eval \
+            --verbose ERROR \
+            --fetch-remote-resources \
+            --profile "xccdf_org.ssgproject.content_profile_stig" \
+            --rule xccdf_org.ssgproject.content_rule_file_ownership_binary_dirs \
+            --results /data/oscap_compliance_output_report.xml \
+            --report /data/oscap_report.html \
+            "scap-security-guide-0.1.61-oval-5.10/ssg-rhel8-ds.xml"
+      volumeMounts:
+        - mountPath: "/data"
+          name: task-pv-storage
+
+  - name: export
+    container:
+      image: ubuntu:latest
+      command: ["sleep"]
+      args: ["infinity"]
+      volumeMounts:
+        - mountPath: "/data"
+          name: task-pv-storage
+
+  ## END TEMPLATES ##
+
+  # DAG
+  - name: scan
+    dag:
+      tasks:
+      # - name: pull-image
+      #   template: skopeo
+      #   arguments:
+      #     parameters: [{name: scan-image, value: "registry1.dso.mil/ironbank/opensource/goharbor/harbor-registryctl:v2.5.0"}]
+      - name: generate-sbom
+        #dependencies: [pull-image]
+        template: syft
+        arguments:
+          parameters: [{name: scan-image, value: "registry1.dso.mil/ironbank/opensource/goharbor/harbor-registryctl:v2.5.0"}]
+      - name: grype-scan
+        dependencies: [generate-sbom]
+        template: grype
+      - name: openscap-scan
+        template: openscap
+      - name: trivy-scan
+        template: trivy
+        arguments:
+          parameters: [{name: scan-image, value: "registry1.dso.mil/ironbank/opensource/goharbor/harbor-registryctl:v2.5.0"}]
+      - name: export-files
+        dependencies: [generate-sbom, grype-scan, trivy-scan]
+        template: export
