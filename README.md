@@ -11,8 +11,12 @@ Expectations:
    4. argo
 
 ## Usage
-1. Setup your k3d cluster and deploy Argo, secrets and pvc: `k3dup`
-2. Edit the `registry1` secret in the `argo` namespace to copy `.dockerconfigjson` to a `config.json` key as required by Syft and Grype:
+1. If you intend to pull images from registry1.dso.mil, first ensure you can authenticate and then setup the following environment variables to be used by `Makefile`:
+   1. REGISTRY1_USERNAME
+   2. REGISTRY1_EMAIL
+   3. REGISTRY1_PASSWORD
+2. Setup your k3d cluster and deploy Argo, secrets and pvc: `k3dup`
+3. Edit the `registry1` secret in the `argo` namespace to copy `.dockerconfigjson` to a `config.json` key as required by Syft and Grype:
 ```
 apiVersion: v1
 data:
@@ -24,9 +28,13 @@ metadata:
   namespace: argo
 type: kubernetes.io/dockerconfigjson
 ```
-3. Apply the argo scan workflow: `make scan`
-4. Bring the Argo dashboard up `make uiup` and down `make uidown`
-5. Tear down the whole cluster: `make k3ddown`
+3. Update the following images:
+   1. oscap image: line 129 of `scan.yaml`
+   2. scan-image value: lines 172 & 181 of `scan.yaml`
+4. Apply the argo scan workflow: `make scan`
+5. Bring the Argo dashboard up `make uiup` and down `make uidown`
+6. Currently the `export` step uses an infinite loop so you have time to copy the files out of the k3d vm and container. You only need to identify the pod id: `k cp dag-scan-rc6wq-1523763437:/data ./data`
+7. Tear down the whole cluster: `make k3ddown`
 
 ### Test Plan
 - We will select an opensource project already hardened and approved within Iron Bank and compare our scan results against those of Iron Bank's Gitlab CI pipeline scanners.
