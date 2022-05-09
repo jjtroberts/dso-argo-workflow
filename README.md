@@ -11,12 +11,13 @@ Expectations:
    4. argo
 
 ## Usage
-1. If you intend to pull images from registry1.dso.mil, first ensure you can authenticate and then setup the following environment variables to be used by `Makefile`:
+1. Install dependencies `make deps`
+2. If you intend to pull images from registry1.dso.mil, first ensure you can authenticate and then setup the following environment variables to be used by `Makefile`:
    1. REGISTRY1_USERNAME
    2. REGISTRY1_EMAIL
    3. REGISTRY1_PASSWORD
-2. Setup your k3d cluster and deploy Argo, secrets and pvc: `k3dup`
-3. Edit the `registry1` secret in the `argo` namespace to copy `.dockerconfigjson` to a `config.json` key as required by Syft and Grype:
+3. Setup your k3d cluster and deploy Argo, secrets and pvc: `k3dup`
+4. Edit the `registry1` secret in the `argo` namespace to copy `.dockerconfigjson` to a `config.json` key as required by Syft and Grype:
 ```
 apiVersion: v1
 data:
