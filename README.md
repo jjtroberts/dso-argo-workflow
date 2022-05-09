@@ -25,6 +25,8 @@ metadata:
 type: kubernetes.io/dockerconfigjson
 ```
 3. Apply the argo scan workflow: `make scan`
+4. Bring the Argo dashboard up `make uiup` and down `make uidown`
+5. Tear down the whole cluster: `make k3ddown`
 
 ### Test Plan
 - We will select an opensource project already hardened and approved within Iron Bank and compare our scan results against those of Iron Bank's Gitlab CI pipeline scanners.
