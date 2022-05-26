@@ -7,23 +7,58 @@ resource "google_service_account" "gke_node_sa" {
   description  = "GKE node service account granted all scopes, then restricted by IAM policy"
 }
 
-# resource "google_project_iam_member" "gke_node_sa_logs_writer" {
-#   project = var.project_name
-#   role    = "roles/logging.logWriter"
-#   member  = "serviceAccount:${google_service_account.gke_node_sa.email}"
-# }
+resource "google_service_account" "gcs_service_account" {
+  account_id   = "gcs-sa"
+  display_name = "Google Cloud Storage Service Account"
+  description  = "Grants gsutil pods access to cloud storage by bucket policy"
+}
 
-# resource "google_project_iam_member" "gke_node_sa_metrics_writer" {
-#   project = var.project_name
-#   role    = "roles/monitoring.metricWriter"
-#   member  = "serviceAccount:${google_service_account.gke_node_sa.email}"
-# }
+resource "google_storage_bucket_iam_member" "argo" {
+  bucket = "rackner-argo"
+  role = "roles/storage.admin"
+  member = "serviceAccount:gcs-sa@platform-one-lab.iam.gserviceaccount.com"
+}
 
-# resource "google_project_iam_member" "gke_node_sa_metadata_writer" {
-#   project = var.project_name
-#   role    = "roles/stackdriver.resourceMetadata.writer"
-#   member  = "serviceAccount:${google_service_account.gke_node_sa.email}"
-# }
+resource "google_service_account_key" "gcs_service_account_key" {
+  service_account_id = google_service_account.gcs_service_account.name
+  public_key_type    = "TYPE_X509_PEM_FILE"
+}
+
+resource "kubernetes_secret" "gcs_service_account_key_secret" {
+  metadata {
+    name = "gcs-service-account"
+    namespace = "argo"
+  }
+
+  data = {
+    "service-account.json" = base64decode(google_service_account_key.gcs_service_account_key.private_key)
+  }
+
+  type = "opaque"
+
+  depends_on = [
+    google_container_cluster.dso_workflow_poc
+  ]
+
+}
+
+resource "google_project_iam_member" "gke_node_sa_logs_writer" {
+  project = var.project_name
+  role    = "roles/logging.logWriter"
+  member  = "serviceAccount:${google_service_account.gke_node_sa.email}"
+}
+
+resource "google_project_iam_member" "gke_node_sa_metrics_writer" {
+  project = var.project_name
+  role    = "roles/monitoring.metricWriter"
+  member  = "serviceAccount:${google_service_account.gke_node_sa.email}"
+}
+
+resource "google_project_iam_member" "gke_node_sa_metadata_writer" {
+  project = var.project_name
+  role    = "roles/stackdriver.resourceMetadata.writer"
+  member  = "serviceAccount:${google_service_account.gke_node_sa.email}"
+}
 
 resource "google_container_cluster" "dso_workflow_poc" {
   name                     = var.project_name

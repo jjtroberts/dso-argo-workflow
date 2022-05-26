@@ -10,35 +10,59 @@ spec:
 
   imagePullSecrets:
     - name: registry1
+  
+  volumeClaimTemplates:
+  - metadata: 
+      name: task-pv-storage
+    spec: 
+      accessModes: [ "ReadWriteOnce" ] 
+      resources: 
+        requests: 
+          storage: 1Gi 
 
   volumes:
-    - name: init-setup
-      emptyDir: {}
-    - name: task-pv-storage
-      persistentVolumeClaim:
-        claimName: task-pv-claim
     - name: registry1
       secret:
         secretName: registry1
+    - name: "gcs-service-account"
+      secret:
+        secretName: "gcs-service-account"
+
+################################### 
+######## GLOBAL CONFIGURAION ###### 
+################################### 
+  arguments: 
+    parameters: 
+  #### GCP SETTINGS ################# 
+    - name: gcp-project-id
+      value: platform-one-lab
+    - name: argo-bucket-name
+      value: rackner-argo
+  #### EXECUTION IMAGES ############
+    - name: gs-image
+      value: google/cloud-sdk:latest
+    - name: syft-image
+      value: anchore/syft:v0.46.2
+    - name: grype-image
+      value: anchore/grype:v0.38.0
+    - name: trivy-image
+      value: aquasec/trivy:0.28.0
+    - name: scan-image
+      value: registry1.dso.mil/ironbank/redhat/ubi/ubi8:8.6
+  #### OSCAP SETTINGS ############
+    - name: compliance-as-code-release
+      value: "https://github.com/ComplianceAsCode/content/releases/download/v0.1.61/scap-security-guide-0.1.61-oval-5.10.zip"
+    - name: scap-security-guide-version
+      value: "scap-security-guide-0.1.61-oval-5.10"
+    - name: stig
+      value: "ssg-rhel8-ds.xml"
+    
 
   templates:
 
   ## START TEMPLATES ##
-
-  # trufflehog?
-
-  # openscap/openscap (skip if Distroless)
-  # probably need a RHEL host for this
-  # Nope: oscap-podman is available only on Fedora and Red Hat Enterprise Linux 8 or newer. 
-  #   On other systems use oscap-docker instead.
-  # apt-get install libopenscap8
-
-
-  # skopeo was a failure, but leaving for reference
+  # skopeo was a failure as it requires a RHEL node, but leaving for reference
   - name: skopeo
-    inputs:
-      parameters:
-      - name: scan-image
     container:
       image: quay.io/skopeo/stable:v1.7.0
       command: [
@@ -46,7 +70,7 @@ spec:
         "copy",
         "--authfile=/credentials/.dockerconfigjson",
         "--remove-signatures",
-        "docker://{{inputs.parameters.scan-image}}",
+        "docker://'{{workflow.parameters.scan-image}}",
         "dir:/data/skopeo/image"
       ]
       volumeMounts:
@@ -57,16 +81,13 @@ spec:
 
   # 2m
   - name: syft
-    inputs:
-      parameters:
-      - name: scan-image
     container:
-      image: anchore/syft:v0.45.1
+      image: '{{workflow.parameters.syft-image}}'
       command: [
         "/syft", 
         "-v", 
         "packages", 
-        "{{inputs.parameters.scan-image}}", 
+        "{{workflow.parameters.scan-image}}", 
         "-o", "json", 
         "--file", "/data/syft.json"
       ]
@@ -82,7 +103,7 @@ spec:
   # 1m
   - name: grype
     container:
-      image: anchore/grype:v0.35.0
+      image: '{{workflow.parameters.grype-image}}'
       command: [
         "/grype", 
         "-v", 
@@ -102,17 +123,14 @@ spec:
 
   # 1m
   - name: trivy
-    inputs:
-      parameters:
-      - name: scan-image
     container:
-      image: aquasec/trivy:0.27.1
+      image: '{{workflow.parameters.trivy-image}}'
       command: [
         "/usr/local/bin/trivy", 
         "image", 
         "-f", "json", 
         "-o", "/data/trivy.json", 
-        "{{inputs.parameters.scan-image}}"]
+        "{{workflow.parameters.scan-image}}"]
       env:
         - name: DOCKER_CONFIG
           value: "/credentials"
@@ -126,14 +144,14 @@ spec:
   # 5m
   - name: openscap
     container:
-      image: registry1.dso.mil/ironbank/opensource/goharbor/harbor-registryctl:v2.5.0
+      image: '{{workflow.parameters.scan-image}}'
       command:
         - bash
         - -c
         - |
           dnf install -y --nodocs openscap-scanner bzip2 wget unzip && \
-          wget https://github.com/ComplianceAsCode/content/releases/download/v0.1.61/scap-security-guide-0.1.61-oval-5.10.zip && \
-          unzip scap-security-guide-0.1.61-oval-5.10.zip && \
+          wget {{workflow.parameters.compliance-as-code-release}} && \
+          unzip {{workflow.parameters.scap-security-guide-version}}.zip && \
           oscap xccdf eval \
             --verbose ERROR \
             --fetch-remote-resources \
@@ -141,19 +159,30 @@ spec:
             --rule xccdf_org.ssgproject.content_rule_file_ownership_binary_dirs \
             --results /data/oscap_compliance_output_report.xml \
             --report /data/oscap_report.html \
-            "scap-security-guide-0.1.61-oval-5.10/ssg-rhel8-ds.xml"
+            "{{workflow.parameters.scap-security-guide-version}}/{{workflow.parameters.stig}}"
       volumeMounts:
         - mountPath: "/data"
           name: task-pv-storage
 
   - name: export
     container:
-      image: ubuntu:latest
-      command: ["sleep"]
-      args: ["infinity"]
+      image: google/cloud-sdk:latest
+      env:
+        - name: "GOOGLE_APPLICATION_CREDENTIALS"
+          value: "/var/run/secret/cloud.google.com/service-account.json"
+      #command: ["sleep"]
+      #args: ["infinity"]
+      command:
+        - bash
+        - -c
+        - |
+          gcloud auth activate-service-account --key-file=/var/run/secret/cloud.google.com/service-account.json
+          gsutil -m cp /data/* gs://{{workflow.parameters.argo-bucket-name}}
       volumeMounts:
         - mountPath: "/data"
           name: task-pv-storage
+        - name: "gcs-service-account"
+          mountPath: "/var/run/secret/cloud.google.com"
 
   ## END TEMPLATES ##
 
@@ -163,13 +192,9 @@ spec:
       tasks:
       # - name: pull-image
       #   template: skopeo
-      #   arguments:
-      #     parameters: [{name: scan-image, value: "registry1.dso.mil/ironbank/opensource/goharbor/harbor-registryctl:v2.5.0"}]
       - name: generate-sbom
         #dependencies: [pull-image]
         template: syft
-        arguments:
-          parameters: [{name: scan-image, value: "registry1.dso.mil/ironbank/opensource/goharbor/harbor-registryctl:v2.5.0"}]
       - name: grype-scan
         dependencies: [generate-sbom]
         template: grype
@@ -177,8 +202,6 @@ spec:
         template: openscap
       - name: trivy-scan
         template: trivy
-        arguments:
-          parameters: [{name: scan-image, value: "registry1.dso.mil/ironbank/opensource/goharbor/harbor-registryctl:v2.5.0"}]
       - name: export-files
         dependencies: [generate-sbom, grype-scan, trivy-scan]
         template: export

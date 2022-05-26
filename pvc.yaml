@@ -3,22 +3,20 @@ kind: PersistentVolume
 metadata:
   name: task-pv-volume
   labels:
-    type: local
+    type: standard
 spec:
-  storageClassName: local-path
+  storageClassName: standard
   capacity:
-    storage: 1Gi
+    storage: 100Mi
   accessModes:
     - ReadWriteOnce
-  hostPath:
-    path: "/tmp/k3dvol"
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: task-pv-claim
 spec:
-  storageClassName: local-path
+  storageClassName: standard
   accessModes:
     - ReadWriteOnce
   resources:

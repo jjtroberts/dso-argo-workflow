@@ -8,4 +8,7 @@
 
 module "chart_argo_workflows" {
   source = "./charts/argo_workflows"
+  depends_on = [
+    google_container_cluster.dso_workflow_poc
+  ]
 }
