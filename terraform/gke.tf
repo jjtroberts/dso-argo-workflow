@@ -1,5 +1,18 @@
 # GKE
 
+## Buckets
+resource "google_storage_bucket" "rackner_argo_raw" {
+  name          = "rackner-argo-raw"
+  location      = "US-CENTRAL1"
+  force_destroy = true
+}
+
+resource "google_storage_bucket" "rackner_argo_combined" {
+  name          = "rackner-argo-combined"
+  location      = "US-CENTRAL1"
+  force_destroy = true
+}
+
 ## Node IAM service account
 resource "google_service_account" "gke_node_sa" {
   account_id   = "kubernetes-engine-node-sa"
@@ -13,10 +26,22 @@ resource "google_service_account" "gcs_service_account" {
   description  = "Grants gsutil pods access to cloud storage by bucket policy"
 }
 
-resource "google_storage_bucket_iam_member" "argo" {
-  bucket = "rackner-argo"
+resource "google_storage_bucket_iam_member" "argo_raw" {
+  bucket = "rackner-argo-raw"
   role = "roles/storage.admin"
   member = "serviceAccount:gcs-sa@platform-one-lab.iam.gserviceaccount.com"
+  depends_on = [
+    google_storage_bucket.rackner_argo_raw
+  ]
+}
+
+resource "google_storage_bucket_iam_member" "argo_combined" {
+  bucket = "rackner-argo-combined"
+  role = "roles/storage.admin"
+  member = "serviceAccount:gcs-sa@platform-one-lab.iam.gserviceaccount.com"
+  depends_on = [
+    google_storage_bucket.rackner_argo_combined
+  ]
 }
 
 resource "google_service_account_key" "gcs_service_account_key" {

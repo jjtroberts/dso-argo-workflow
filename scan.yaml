@@ -2,6 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Workflow
 metadata:
   generateName: dag-scan-
+  namespace: argo
 spec:
   entrypoint: scan
 
@@ -37,7 +38,7 @@ spec:
     - name: gcp-project-id
       value: platform-one-lab
     - name: argo-bucket-name
-      value: rackner-argo
+      value: rackner-argo-raw
   #### EXECUTION IMAGES ############
     - name: gs-image
       value: google/cloud-sdk:latest
@@ -203,5 +204,5 @@ spec:
       - name: trivy-scan
         template: trivy
       - name: export-files
-        dependencies: [generate-sbom, grype-scan, trivy-scan]
+        dependencies: [generate-sbom, grype-scan, trivy-scan, openscap-scan]
         template: export

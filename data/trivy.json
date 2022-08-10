@@ -1,159 +1,98 @@
 {
   "SchemaVersion": 2,
-  "ArtifactName": "registry1.dso.mil/ironbank/opensource/goharbor/harbor-registryctl:v2.5.0",
+  "ArtifactName": "registry1.dso.mil/ironbank/redhat/ubi/ubi8:8.6",
   "ArtifactType": "container_image",
   "Metadata": {
     "OS": {
       "Family": "redhat",
-      "Name": "8.5"
+      "Name": "8.6"
     },
-    "ImageID": "sha256:1f8a9fff5b87e6f02ac3e313902429156abc8db54e5e6e5ff1cecc4707df7227",
+    "ImageID": "sha256:0eb103cd50d8c3f6426a0030b30b1564cd337e8b931b3bd8bfd8e6ffc85bac13",
     "DiffIDs": [
-      "sha256:0d3f22d60daf4a2421b2239fb0e1c6ec02d3787274db8b098fb648941ea2d5dc",
-      "sha256:0488bd866f642b2b1b5490f5c50d628815e4e8fa1f7cae57d52c67c1e9d3e2cc",
-      "sha256:eebc402c78edcee75e73ea20095f6314595e0b728e2caf2920def8663c172a4f",
-      "sha256:8bd721a22c44d09303e7691e983e383c09961a5b3fc63dc3b6a33460526715b8"
+      "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69",
+      "sha256:773711fd02f009e3bc5f9e2b1e859bf2103ba7318b3eb73390490afb3a3a8848",
+      "sha256:7411c1b6233173b1ea484659ca16541c80bceb3da903f3a8e39173a79b010b88"
     ],
     "RepoTags": [
-      "registry1.dso.mil/ironbank/opensource/goharbor/harbor-registryctl:v2.5.0"
+      "registry1.dso.mil/ironbank/redhat/ubi/ubi8:8.6"
     ],
     "RepoDigests": [
-      "registry1.dso.mil/ironbank/opensource/goharbor/harbor-registryctl@sha256:be25fb2b970c71ebca7f2ff9808f9616e80a27f29f139772a881ef8bd0eeaa02"
+      "registry1.dso.mil/ironbank/redhat/ubi/ubi8@sha256:0c59367deca557a2208e4bdbeed9bfbb87f72877f4333d938364a8459cb6e689"
     ],
     "ImageConfig": {
       "architecture": "amd64",
-      "created": "2022-04-28T01:07:16.983594744Z",
+      "created": "2022-05-26T00:55:36.832841229Z",
       "history": [
         {
-          "created": "2021-11-03T13:57:39.79709821Z",
+          "created": "2022-05-03T08:38:31.708640336Z",
           "comment": "Imported from -"
         },
         {
-          "created": "2021-11-03T13:57:53.878769Z"
+          "created": "2022-05-03T08:39:27.737951Z"
         },
         {
-          "created": "2022-04-27T23:22:45.013591396Z",
+          "created": "2022-05-26T00:55:24.879115796Z",
           "created_by": "/bin/sh -c #(nop) ARG GOPROXY=http://nexus-repository-manager.nexus-repository-manager.svc.cluster.local:8081/repository/goproxy/ HTTP_PROXY=http://localhost:3128 http_proxy=http://localhost:3128",
           "empty_layer": true
         },
         {
-          "created": "2022-04-27T23:22:45.013608406Z",
+          "created": "2022-05-26T00:55:24.879133767Z",
           "created_by": "/bin/sh -c #(nop) ARG GOPROXY=http://nexus-repository-manager.nexus-repository-manager.svc.cluster.local:8081/repository/goproxy/ GOSUMDB=sum.golang.org http://nexus-repository-manager.nexus-repository-manager.svc.cluster.local:8081/repository/gosum HTTP_PROXY=http://localhost:3128 http_proxy=http://localhost:3128",
           "empty_layer": true
         },
         {
-          "created": "2022-04-27T23:22:45.315729397Z",
+          "created": "2022-05-26T00:55:25.210899569Z",
           "created_by": "/bin/sh -c #(nop) COPY dir:d879ba5c4ce1365afd2d73d9ca22dde522b5bc855fa4b72bc9f756c44654db3b in /dsop-fix/ ",
           "empty_layer": true
         },
         {
-          "created": "2022-04-27T23:22:45.539376819Z",
+          "created": "2022-05-26T00:55:25.56752625Z",
           "created_by": "/bin/sh -c #(nop) COPY file:bd69419b4ad4fadd7c90adb4226d57365d63f58988aaac98c246d7c5351aebcf in /etc/pki/ca-trust/source/anchors/Certificates_PKCS7_v5.9_DoD.pem ",
           "empty_layer": true
         },
         {
-          "created": "2022-04-27T23:22:45.834456807Z",
+          "created": "2022-05-26T00:55:26.258059335Z",
           "created_by": "/bin/sh -c #(nop) COPY file:256923016d82be8b59dd5cf92e01537ad0a3606573ce6270b762994ad2398087 in /etc/pki/ca-trust/source/anchors/Certificates_PKCS7_v5.13_WCF.pem ",
           "empty_layer": true
         },
         {
-          "created": "2022-04-27T23:22:46.05124959Z",
+          "created": "2022-05-26T00:55:26.799470187Z",
           "created_by": "/bin/sh -c #(nop) COPY file:a5fbb98dfe766c185eaf98d93a13209fa81d62fff9022eebfd5d3bb3fd3a8843 in /etc/ ",
           "empty_layer": true
         },
         {
-          "created": "2022-04-27T23:23:02.585426318Z",
+          "created": "2022-05-26T00:55:36.831642454Z",
           "created_by": "|5 GOPROXY=http://nexus-repository-manager.nexus-repository-manager.svc.cluster.local:8081/repository/goproxy/ GOSUMDB=sum.golang.org http://nexus-repository-manager.nexus-repository-manager.svc.cluster.local:8081/repository/gosum HTTP_PROXY=http://localhost:3128 http_proxy=http://localhost:3128 /bin/sh -c echo Update packages and install DISA STIG fixes \u0026\u0026     sed -i \"s/enabled=1/enabled=0/\" /etc/dnf/plugins/subscription-manager.conf \u0026\u0026     echo \"exclude=filesystem-*\" \u003e\u003e /etc/dnf/dnf.conf \u0026\u0026     chmod 644 /etc/issue /etc/pki/ca-trust/source/anchors/*.pem \u0026\u0026     chmod +x /dsop-fix/*.sh \u0026\u0026     dnf repolist \u0026\u0026     dnf update -y \u0026\u0026     dnf install -y cracklib-dicts nss \u0026\u0026     echo \"* hard maxlogins 10\" \u003e /etc/security/limits.d/maxlogins.conf \u0026\u0026     /dsop-fix/xccdf_org.ssgproject.content_rule_account_disable_post_pw_expiration.sh \u0026\u0026     /dsop-fix/xccdf_org.ssgproject.content_rule_accounts_logon_fail_delay.sh \u0026\u0026     /dsop-fix/xccdf_org.ssgproject.content_rule_accounts_max_concurrent_login_sessions.sh \u0026\u0026     /dsop-fix/xccdf_org.ssgproject.content_rule_accounts_maximum_age_login_defs.sh \u0026\u0026     /dsop-fix/xccdf_org.ssgproject.content_rule_accounts_minimum_age_login_defs.sh \u0026\u0026     /dsop-fix/xccdf_org.ssgproject.content_rule_accounts_password_minlen_login_defs.sh \u0026\u0026     /dsop-fix/xccdf_org.ssgproject.content_rule_accounts_password_pam_dcredit.sh \u0026\u0026     /dsop-fix/xccdf_org.ssgproject.content_rule_accounts_password_pam_dictcheck.sh \u0026\u0026     /dsop-fix/xccdf_org.ssgproject.content_rule_accounts_password_pam_difok.sh \u0026\u0026     /dsop-fix/xccdf_org.ssgproject.content_rule_accounts_password_pam_lcredit.sh \u0026\u0026     /dsop-fix/xccdf_org.ssgproject.content_rule_accounts_password_pam_maxclassrepeat.sh \u0026\u0026     /dsop-fix/xccdf_org.ssgproject.content_rule_accounts_password_pam_maxrepeat.sh \u0026\u0026     /dsop-fix/xccdf_org.ssgproject.content_rule_accounts_password_pam_minclass.sh \u0026\u0026     /dsop-fix/xccdf_org.ssgproject.content_rule_accounts_password_pam_minlen.sh \u0026\u0026     /dsop-fix/xccdf_org.ssgproject.content_rule_accounts_password_pam_ocredit.sh \u0026\u0026     /dsop-fix/xccdf_org.ssgproject.content_rule_accounts_password_pam_pwhistory_remember_password_auth.sh \u0026\u0026     /dsop-fix/xccdf_org.ssgproject.content_rule_accounts_password_pam_pwhistory_remember_system_auth.sh \u0026\u0026     /dsop-fix/xccdf_org.ssgproject.content_rule_accounts_password_pam_ucredit.sh \u0026\u0026     /dsop-fix/xccdf_org.ssgproject.content_rule_accounts_password_pam_unix_remember.sh \u0026\u0026     /dsop-fix/xccdf_org.ssgproject.content_rule_accounts_passwords_pam_faillock_deny.sh \u0026\u0026     /dsop-fix/xccdf_org.ssgproject.content_rule_accounts_passwords_pam_faillock_deny_root.sh \u0026\u0026     /dsop-fix/xccdf_org.ssgproject.content_rule_accounts_passwords_pam_faillock_interval.sh \u0026\u0026     /dsop-fix/xccdf_org.ssgproject.content_rule_accounts_passwords_pam_faillock_unlock_time.sh \u0026\u0026     /dsop-fix/xccdf_org.ssgproject.content_rule_accounts_passwords_pam_faillock.sh \u0026\u0026     /dsop-fix/xccdf_org.ssgproject.content_rule_accounts_umask_etc_bashrc.sh \u0026\u0026     /dsop-fix/xccdf_org.ssgproject.content_rule_accounts_umask_etc_csh_cshrc.sh \u0026\u0026     /dsop-fix/xccdf_org.ssgproject.content_rule_accounts_umask_etc_login_defs.sh \u0026\u0026     /dsop-fix/xccdf_org.ssgproject.content_rule_accounts_umask_etc_profile.sh \u0026\u0026     /dsop-fix/xccdf_org.ssgproject.content_rule_banner_etc_issue.sh \u0026\u0026     /dsop-fix/xccdf_org.ssgproject.content_rule_configure_kerberos_crypto_policy.sh \u0026\u0026     /dsop-fix/xccdf_org.ssgproject.content_rule_configure_openssl_crypto_policy.sh \u0026\u0026     /dsop-fix/xccdf_org.ssgproject.content_rule_coredump_disable_backtraces.sh \u0026\u0026     /dsop-fix/xccdf_org.ssgproject.content_rule_coredump_disable_storage.sh \u0026\u0026     /dsop-fix/xccdf_org.ssgproject.content_rule_disable_ctrlaltdel_burstaction.sh \u0026\u0026     /dsop-fix/xccdf_org.ssgproject.content_rule_disable_users_coredumps.sh \u0026\u0026     /dsop-fix/xccdf_org.ssgproject.content_rule_display_login_attempts.sh \u0026\u0026     /dsop-fix/xccdf_org.ssgproject.content_rule_ensure_gpgcheck_local_packages.sh \u0026\u0026     /dsop-fix/xccdf_org.ssgproject.content_rule_file_groupownership_system_commands_dirs.sh \u0026\u0026     /dsop-fix/xccdf_org.ssgproject.content_rule_network_configure_name_resolution.sh \u0026\u0026     /dsop-fix/xccdf_org.ssgproject.content_rule_no_empty_passwords.sh \u0026\u0026     /dsop-fix/xccdf_org.ssgproject.content_rule_openssl_use_strong_entropy.sh \u0026\u0026     /dsop-fix/xccdf_org.ssgproject.content_rule_package_crypto-policies_installed.sh \u0026\u0026     /dsop-fix/xccdf_org.ssgproject.content_rule_package_iptables_installed.sh \u0026\u0026     update-ca-trust \u0026\u0026     update-ca-trust force-enable \u0026\u0026     dnf clean all \u0026\u0026     rm -rf /dsop-fix/ /var/cache/dnf/ /var/tmp/* /tmp/* /var/tmp/.???* /tmp/.???*",
           "empty_layer": true
         },
         {
-          "created": "2022-04-27T23:23:02.585479929Z",
+          "created": "2022-05-26T00:55:36.831698197Z",
           "created_by": "/bin/sh -c #(nop) ENV container oci",
           "empty_layer": true
         },
         {
-          "created": "2022-04-27T23:23:02.585553772Z",
+          "created": "2022-05-26T00:55:36.831729959Z",
           "created_by": "/bin/sh -c #(nop) ENV PATH /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
           "empty_layer": true
         },
         {
-          "created": "2022-04-27T23:23:03.93587295Z",
+          "created": "2022-05-26T00:55:37.486748221Z",
           "created_by": "/bin/sh -c #(nop) CMD [\"/bin/bash\"]",
-          "comment": "FROM registry.access.redhat.com/ubi8:8.5"
-        },
-        {
-          "created": "2022-04-28T01:07:11.667025653Z",
-          "created_by": "/bin/sh -c #(nop) ARG GOPROXY=http://nexus-repository-manager.nexus-repository-manager.svc.cluster.local:8081/repository/goproxy/ HTTP_PROXY=http://localhost:3128 http_proxy=http://localhost:3128",
-          "empty_layer": true
-        },
-        {
-          "created": "2022-04-28T01:07:11.667069924Z",
-          "created_by": "/bin/sh -c #(nop) ARG GOPROXY=http://nexus-repository-manager.nexus-repository-manager.svc.cluster.local:8081/repository/goproxy/ GOSUMDB=sum.golang.org http://nexus-repository-manager.nexus-repository-manager.svc.cluster.local:8081/repository/gosum HTTP_PROXY=http://localhost:3128 http_proxy=http://localhost:3128",
-          "empty_layer": true
-        },
-        {
-          "created": "2022-04-28T01:07:15.647825276Z",
-          "created_by": "|5 GOPROXY=http://nexus-repository-manager.nexus-repository-manager.svc.cluster.local:8081/repository/goproxy/ GOSUMDB=sum.golang.org http://nexus-repository-manager.nexus-repository-manager.svc.cluster.local:8081/repository/gosum HTTP_PROXY=http://localhost:3128 http_proxy=http://localhost:3128 /bin/sh -c groupadd -g 10000 harbor \u0026\u0026     useradd -r -u 10000 -m -s /sbin/nologin -g harbor harbor \u0026\u0026     mkdir -p /etc/registry \u0026\u0026     dnf upgrade -y \u0026\u0026     dnf clean all \u0026\u0026     rm -rf /var/cache/dnf",
-          "empty_layer": true
-        },
-        {
-          "created": "2022-04-28T01:07:16.190094008Z",
-          "created_by": "/bin/sh -c #(nop) COPY file:7db87048728adb10fe204a4cc2dbf8a637bbec23a1d6e165c99fcae0c70e790b in /home/harbor/harbor_registryctl ",
-          "empty_layer": true
-        },
-        {
-          "created": "2022-04-28T01:07:16.700372291Z",
-          "created_by": "/bin/sh -c #(nop) COPY file:099c6ca303cd5c989c330658dcb051b0b36202ddfd0a8ba8594f35198ef18351 in /usr/bin/registry_DO_NOT_USE_GC ",
-          "empty_layer": true
-        },
-        {
-          "created": "2022-04-28T01:07:16.777836177Z",
-          "created_by": "/bin/sh -c #(nop) WORKDIR /home/harbor",
-          "empty_layer": true
-        },
-        {
-          "created": "2022-04-28T01:07:16.812771223Z",
-          "created_by": "/bin/sh -c #(nop) USER harbor",
-          "empty_layer": true
-        },
-        {
-          "created": "2022-04-28T01:07:16.845500931Z",
-          "created_by": "/bin/sh -c #(nop) VOLUME [\"/var/lib/registry\"]",
-          "empty_layer": true
-        },
-        {
-          "created": "2022-04-28T01:07:16.895888498Z",
-          "created_by": "/bin/sh -c #(nop) HEALTHCHECK CMD curl -fs http://localhost:8080/api/health || curl -fsk --key /etc/harbor/ssl/registryctl.key --cert /etc/harbor/ssl/registryctl.crt https://localhost:8443/api/health || exit 1",
-          "empty_layer": true
-        },
-        {
-          "created": "2022-04-28T01:07:16.928228456Z",
-          "created_by": "/bin/sh -c #(nop) ENTRYPOINT [\"/home/harbor/harbor_registryctl\"]",
-          "empty_layer": true
-        },
-        {
-          "created": "2022-04-28T01:07:17.742110192Z",
-          "created_by": "/bin/sh -c #(nop) CMD [\"-c\", \"/etc/registryctl/config.yml\"]",
-          "comment": "FROM registry1.dso.mil/ironbank/redhat/ubi/ubi8:8.5"
+          "comment": "FROM registry.access.redhat.com/ubi8:8.6"
         }
       ],
       "os": "linux",
       "rootfs": {
         "type": "layers",
         "diff_ids": [
-          "sha256:0d3f22d60daf4a2421b2239fb0e1c6ec02d3787274db8b098fb648941ea2d5dc",
-          "sha256:0488bd866f642b2b1b5490f5c50d628815e4e8fa1f7cae57d52c67c1e9d3e2cc",
-          "sha256:eebc402c78edcee75e73ea20095f6314595e0b728e2caf2920def8663c172a4f",
-          "sha256:8bd721a22c44d09303e7691e983e383c09961a5b3fc63dc3b6a33460526715b8"
+          "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69",
+          "sha256:773711fd02f009e3bc5f9e2b1e859bf2103ba7318b3eb73390490afb3a3a8848",
+          "sha256:7411c1b6233173b1ea484659ca16541c80bceb3da903f3a8e39173a79b010b88"
         ]
       },
       "config": {
         "Cmd": [
-          "-c",
-          "/etc/registryctl/config.yml"
-        ],
-        "Entrypoint": [
-          "/home/harbor/harbor_registryctl"
+          "/bin/bash"
         ],
         "Env": [
           "container=oci",
@@ -161,8 +100,8 @@
         ],
         "Labels": {
           "architecture": "x86_64",
-          "build-date": "2021-11-03T13:57:13.897992",
-          "com.redhat.build-host": "cpt-1006.osbs.prod.upshift.rdu2.redhat.com",
+          "build-date": "2022-05-03T08:36:31.336870",
+          "com.redhat.build-host": "cpt-1002.osbs.prod.upshift.rdu2.redhat.com",
           "com.redhat.component": "ubi8-container",
           "com.redhat.license_terms": "https://www.redhat.com/en/about/red-hat-end-user-license-agreements#UBI",
           "description": "The Universal Base Image is designed and engineered to be the base layer for all of your containerized applications, middleware and utilities. This base image is freely redistributable, but Red Hat only supports Red Hat technologies through subscriptions for Red Hat products. This image is maintained by Red Hat and updated regularly.",
@@ -173,38 +112,34 @@
           "io.openshift.expose-services": "",
           "io.openshift.tags": "base rhel8",
           "maintainer": "ironbank@dsop.io",
-          "mil.dso.ironbank.image.keywords": "container,registry",
-          "mil.dso.ironbank.image.type": "opensource",
-          "mil.dso.ironbank.product.name": "Harbor",
+          "mil.dso.ironbank.image.keywords": "base,os,rhel,ubi",
+          "mil.dso.ironbank.image.parent": "",
+          "mil.dso.ironbank.image.type": "commercial",
+          "mil.dso.ironbank.product.name": "UBI8",
           "name": "ubi8",
-          "org.opencontainers.image.created": "2022-04-28 01:05:48+00:00",
-          "org.opencontainers.image.description": "Harbor is an open source cloud native registry that stores, signs, and scans content.",
-          "org.opencontainers.image.licenses": "Apache-2.0",
-          "org.opencontainers.image.revision": "060c87004ee81f2932507b6ba134632e37d5ad75",
-          "org.opencontainers.image.source": "https://repo1.dso.mil/dsop/opensource/goharbor/harbor-registryctl",
-          "org.opencontainers.image.title": "harbor-registryctl",
-          "org.opencontainers.image.url": "https://goharbor.io",
-          "org.opencontainers.image.vendor": "goharbor",
-          "org.opencontainers.image.version": "v2.5.0",
-          "release": "200",
+          "org.opencontainers.image.created": "2022-05-26 00:54:22+00:00",
+          "org.opencontainers.image.description": "Red Hat Universal Base Images (UBI) are OCI-compliant container base operating system images with complementary runtime languages and packages that are freely redistributable.",
+          "org.opencontainers.image.licenses": "Red Hat Universal Base Image EULA",
+          "org.opencontainers.image.revision": "bc61084befed42a2642cd4421d0eb98edd723fb5",
+          "org.opencontainers.image.source": "https://repo1.dso.mil/dsop/redhat/ubi/ubi8",
+          "org.opencontainers.image.title": "ubi8",
+          "org.opencontainers.image.url": "https://catalog.redhat.com/software/container-stacks/detail/5ec53f50ef29fd35586d9a56",
+          "org.opencontainers.image.vendor": "Red Hat",
+          "org.opencontainers.image.version": "8.6",
+          "release": "754",
           "summary": "Provides the latest release of Red Hat Universal Base Image 8.",
-          "url": "https://access.redhat.com/containers/#/registry.access.redhat.com/ubi8/images/8.5-200",
-          "vcs-ref": "3aadd00326f3dd6cfe65ee31017ab98915fddb56",
+          "url": "https://access.redhat.com/containers/#/registry.access.redhat.com/ubi8/images/8.6-754",
+          "vcs-ref": "f1ee6e37554363ec55e0035aba1a693d3627fdeb",
           "vcs-type": "git",
           "vendor": "Red Hat, Inc.",
-          "version": "8.5"
-        },
-        "User": "harbor",
-        "Volumes": {
-          "/var/lib/registry": {}
-        },
-        "WorkingDir": "/home/harbor"
+          "version": "8.6"
+        }
       }
     }
   },
   "Results": [
     {
-      "Target": "registry1.dso.mil/ironbank/opensource/goharbor/harbor-registryctl:v2.5.0 (redhat 8.5)",
+      "Target": "registry1.dso.mil/ironbank/redhat/ubi/ubi8:8.6 (redhat 8.6)",
       "Class": "os-pkgs",
       "Type": "redhat",
       "Vulnerabilities": [
@@ -213,8 +148,8 @@
           "PkgName": "bzip2-libs",
           "InstalledVersion": "1.0.6-26.el8",
           "Layer": {
-            "Digest": "sha256:ac56bdc7f9934acede05653e9e01e73e961c31818b522c0732ad35350bb3a82b",
-            "DiffID": "sha256:0d3f22d60daf4a2421b2239fb0e1c6ec02d3787274db8b098fb648941ea2d5dc"
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2019-12900",
@@ -279,8 +214,8 @@
           "PkgName": "curl",
           "InstalledVersion": "7.61.1-22.el8",
           "Layer": {
-            "Digest": "sha256:ac56bdc7f9934acede05653e9e01e73e961c31818b522c0732ad35350bb3a82b",
-            "DiffID": "sha256:0d3f22d60daf4a2421b2239fb0e1c6ec02d3787274db8b098fb648941ea2d5dc"
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-22576",
@@ -305,8 +240,8 @@
           "PkgName": "curl",
           "InstalledVersion": "7.61.1-22.el8",
           "Layer": {
-            "Digest": "sha256:ac56bdc7f9934acede05653e9e01e73e961c31818b522c0732ad35350bb3a82b",
-            "DiffID": "sha256:0d3f22d60daf4a2421b2239fb0e1c6ec02d3787274db8b098fb648941ea2d5dc"
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-27774",
@@ -331,8 +266,8 @@
           "PkgName": "curl",
           "InstalledVersion": "7.61.1-22.el8",
           "Layer": {
-            "Digest": "sha256:ac56bdc7f9934acede05653e9e01e73e961c31818b522c0732ad35350bb3a82b",
-            "DiffID": "sha256:0d3f22d60daf4a2421b2239fb0e1c6ec02d3787274db8b098fb648941ea2d5dc"
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-27776",
@@ -353,12 +288,38 @@
           ]
         },
         {
+          "VulnerabilityID": "CVE-2022-27782",
+          "PkgName": "curl",
+          "InstalledVersion": "7.61.1-22.el8",
+          "Layer": {
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
+          },
+          "SeveritySource": "redhat",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-27782",
+          "Title": "curl: TLS and SSH connection too eager reuse",
+          "Description": "No description is available for this CVE.",
+          "Severity": "MEDIUM",
+          "CVSS": {
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:L/I:L/A:L",
+              "V3Score": 6
+            }
+          },
+          "References": [
+            "https://access.redhat.com/security/cve/CVE-2022-27782",
+            "https://curl.se/docs/CVE-2022-27782.html",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-27782",
+            "https://ubuntu.com/security/notices/USN-5412-1"
+          ]
+        },
+        {
           "VulnerabilityID": "CVE-2020-35512",
           "PkgName": "dbus",
-          "InstalledVersion": "1:1.12.8-14.el8",
+          "InstalledVersion": "1:1.12.8-18.el8",
           "Layer": {
-            "Digest": "sha256:ac56bdc7f9934acede05653e9e01e73e961c31818b522c0732ad35350bb3a82b",
-            "DiffID": "sha256:0d3f22d60daf4a2421b2239fb0e1c6ec02d3787274db8b098fb648941ea2d5dc"
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2020-35512",
@@ -391,7 +352,8 @@
             "https://gitlab.freedesktop.org/dbus/dbus/-/issues/305",
             "https://gitlab.freedesktop.org/dbus/dbus/-/issues/305#note_829128",
             "https://security-tracker.debian.org/tracker/CVE-2020-35512",
-            "https://ubuntu.com/security/notices/USN-5244-1"
+            "https://ubuntu.com/security/notices/USN-5244-1",
+            "https://ubuntu.com/security/notices/USN-5244-2"
           ],
           "PublishedDate": "2021-02-15T17:15:00Z",
           "LastModifiedDate": "2021-03-08T21:15:00Z"
@@ -399,10 +361,10 @@
         {
           "VulnerabilityID": "CVE-2020-35512",
           "PkgName": "dbus-common",
-          "InstalledVersion": "1:1.12.8-14.el8",
+          "InstalledVersion": "1:1.12.8-18.el8",
           "Layer": {
-            "Digest": "sha256:ac56bdc7f9934acede05653e9e01e73e961c31818b522c0732ad35350bb3a82b",
-            "DiffID": "sha256:0d3f22d60daf4a2421b2239fb0e1c6ec02d3787274db8b098fb648941ea2d5dc"
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2020-35512",
@@ -435,7 +397,8 @@
             "https://gitlab.freedesktop.org/dbus/dbus/-/issues/305",
             "https://gitlab.freedesktop.org/dbus/dbus/-/issues/305#note_829128",
             "https://security-tracker.debian.org/tracker/CVE-2020-35512",
-            "https://ubuntu.com/security/notices/USN-5244-1"
+            "https://ubuntu.com/security/notices/USN-5244-1",
+            "https://ubuntu.com/security/notices/USN-5244-2"
           ],
           "PublishedDate": "2021-02-15T17:15:00Z",
           "LastModifiedDate": "2021-03-08T21:15:00Z"
@@ -443,10 +406,10 @@
         {
           "VulnerabilityID": "CVE-2020-35512",
           "PkgName": "dbus-daemon",
-          "InstalledVersion": "1:1.12.8-14.el8",
+          "InstalledVersion": "1:1.12.8-18.el8",
           "Layer": {
-            "Digest": "sha256:ac56bdc7f9934acede05653e9e01e73e961c31818b522c0732ad35350bb3a82b",
-            "DiffID": "sha256:0d3f22d60daf4a2421b2239fb0e1c6ec02d3787274db8b098fb648941ea2d5dc"
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2020-35512",
@@ -479,7 +442,8 @@
             "https://gitlab.freedesktop.org/dbus/dbus/-/issues/305",
             "https://gitlab.freedesktop.org/dbus/dbus/-/issues/305#note_829128",
             "https://security-tracker.debian.org/tracker/CVE-2020-35512",
-            "https://ubuntu.com/security/notices/USN-5244-1"
+            "https://ubuntu.com/security/notices/USN-5244-1",
+            "https://ubuntu.com/security/notices/USN-5244-2"
           ],
           "PublishedDate": "2021-02-15T17:15:00Z",
           "LastModifiedDate": "2021-03-08T21:15:00Z"
@@ -487,10 +451,10 @@
         {
           "VulnerabilityID": "CVE-2020-35512",
           "PkgName": "dbus-libs",
-          "InstalledVersion": "1:1.12.8-14.el8",
+          "InstalledVersion": "1:1.12.8-18.el8",
           "Layer": {
-            "Digest": "sha256:ac56bdc7f9934acede05653e9e01e73e961c31818b522c0732ad35350bb3a82b",
-            "DiffID": "sha256:0d3f22d60daf4a2421b2239fb0e1c6ec02d3787274db8b098fb648941ea2d5dc"
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2020-35512",
@@ -523,7 +487,8 @@
             "https://gitlab.freedesktop.org/dbus/dbus/-/issues/305",
             "https://gitlab.freedesktop.org/dbus/dbus/-/issues/305#note_829128",
             "https://security-tracker.debian.org/tracker/CVE-2020-35512",
-            "https://ubuntu.com/security/notices/USN-5244-1"
+            "https://ubuntu.com/security/notices/USN-5244-1",
+            "https://ubuntu.com/security/notices/USN-5244-2"
           ],
           "PublishedDate": "2021-02-15T17:15:00Z",
           "LastModifiedDate": "2021-03-08T21:15:00Z"
@@ -531,10 +496,10 @@
         {
           "VulnerabilityID": "CVE-2020-35512",
           "PkgName": "dbus-tools",
-          "InstalledVersion": "1:1.12.8-14.el8",
+          "InstalledVersion": "1:1.12.8-18.el8",
           "Layer": {
-            "Digest": "sha256:ac56bdc7f9934acede05653e9e01e73e961c31818b522c0732ad35350bb3a82b",
-            "DiffID": "sha256:0d3f22d60daf4a2421b2239fb0e1c6ec02d3787274db8b098fb648941ea2d5dc"
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2020-35512",
@@ -567,368 +532,19 @@
             "https://gitlab.freedesktop.org/dbus/dbus/-/issues/305",
             "https://gitlab.freedesktop.org/dbus/dbus/-/issues/305#note_829128",
             "https://security-tracker.debian.org/tracker/CVE-2020-35512",
-            "https://ubuntu.com/security/notices/USN-5244-1"
+            "https://ubuntu.com/security/notices/USN-5244-1",
+            "https://ubuntu.com/security/notices/USN-5244-2"
           ],
           "PublishedDate": "2021-02-15T17:15:00Z",
           "LastModifiedDate": "2021-03-08T21:15:00Z"
         },
         {
-          "VulnerabilityID": "CVE-2021-45960",
-          "PkgName": "expat",
-          "InstalledVersion": "2.2.5-4.el8_5.3",
-          "Layer": {
-            "Digest": "sha256:77021c8c5a2c26b7370f701db23765e7059b1a663de3e38496a8a147c7b159cb",
-            "DiffID": "sha256:eebc402c78edcee75e73ea20095f6314595e0b728e2caf2920def8663c172a4f"
-          },
-          "SeveritySource": "redhat",
-          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-45960",
-          "Title": "expat: Large number of prefixed XML attributes on a single tag can crash libexpat",
-          "Description": "In Expat (aka libexpat) before 2.4.3, a left shift by 29 (or more) places in the storeAtts function in xmlparse.c can lead to realloc misbehavior (e.g., allocating too few bytes, or only freeing memory).",
-          "Severity": "MEDIUM",
-          "CweIDs": [
-            "CWE-400"
-          ],
-          "CVSS": {
-            "nvd": {
-              "V2Vector": "AV:N/AC:L/Au:S/C:C/I:C/A:C",
-              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-              "V2Score": 9,
-              "V3Score": 8.8
-            },
-            "redhat": {
-              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-              "V3Score": 8.8
-            }
-          },
-          "References": [
-            "http://www.openwall.com/lists/oss-security/2022/01/17/3",
-            "https://access.redhat.com/security/cve/CVE-2021-45960",
-            "https://bugzilla.mozilla.org/show_bug.cgi?id=1217609",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-45960",
-            "https://github.com/libexpat/libexpat/issues/531",
-            "https://github.com/libexpat/libexpat/pull/534",
-            "https://github.com/libexpat/libexpat/pull/534/commits/0adcb34c49bee5b19bd29b16a578c510c23597ea",
-            "https://linux.oracle.com/cve/CVE-2021-45960.html",
-            "https://linux.oracle.com/errata/ELSA-2022-1069.html",
-            "https://nvd.nist.gov/vuln/detail/CVE-2021-45960",
-            "https://security.netapp.com/advisory/ntap-20220121-0004/",
-            "https://ubuntu.com/security/notices/USN-5288-1",
-            "https://www.debian.org/security/2022/dsa-5073",
-            "https://www.tenable.com/security/tns-2022-05"
-          ],
-          "PublishedDate": "2022-01-01T19:15:00Z",
-          "LastModifiedDate": "2022-03-17T17:02:00Z"
-        },
-        {
-          "VulnerabilityID": "CVE-2021-46143",
-          "PkgName": "expat",
-          "InstalledVersion": "2.2.5-4.el8_5.3",
-          "Layer": {
-            "Digest": "sha256:77021c8c5a2c26b7370f701db23765e7059b1a663de3e38496a8a147c7b159cb",
-            "DiffID": "sha256:eebc402c78edcee75e73ea20095f6314595e0b728e2caf2920def8663c172a4f"
-          },
-          "SeveritySource": "redhat",
-          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-46143",
-          "Title": "expat: Integer overflow in doProlog in xmlparse.c",
-          "Description": "In doProlog in xmlparse.c in Expat (aka libexpat) before 2.4.3, an integer overflow exists for m_groupSize.",
-          "Severity": "MEDIUM",
-          "CweIDs": [
-            "CWE-190"
-          ],
-          "CVSS": {
-            "nvd": {
-              "V2Vector": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
-              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-              "V2Score": 6.8,
-              "V3Score": 7.8
-            },
-            "redhat": {
-              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-              "V3Score": 7.8
-            }
-          },
-          "References": [
-            "http://www.openwall.com/lists/oss-security/2022/01/17/3",
-            "https://access.redhat.com/security/cve/CVE-2021-46143",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-46143",
-            "https://github.com/libexpat/libexpat/issues/532",
-            "https://github.com/libexpat/libexpat/pull/538",
-            "https://linux.oracle.com/cve/CVE-2021-46143.html",
-            "https://linux.oracle.com/errata/ELSA-2022-9227.html",
-            "https://nvd.nist.gov/vuln/detail/CVE-2021-46143",
-            "https://security.netapp.com/advisory/ntap-20220121-0006/",
-            "https://ubuntu.com/security/notices/USN-5288-1",
-            "https://www.debian.org/security/2022/dsa-5073",
-            "https://www.tenable.com/security/tns-2022-05"
-          ],
-          "PublishedDate": "2022-01-06T04:15:00Z",
-          "LastModifiedDate": "2022-02-25T18:42:00Z"
-        },
-        {
-          "VulnerabilityID": "CVE-2022-22822",
-          "PkgName": "expat",
-          "InstalledVersion": "2.2.5-4.el8_5.3",
-          "Layer": {
-            "Digest": "sha256:77021c8c5a2c26b7370f701db23765e7059b1a663de3e38496a8a147c7b159cb",
-            "DiffID": "sha256:eebc402c78edcee75e73ea20095f6314595e0b728e2caf2920def8663c172a4f"
-          },
-          "SeveritySource": "redhat",
-          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-22822",
-          "Title": "expat: Integer overflow in addBinding in xmlparse.c",
-          "Description": "addBinding in xmlparse.c in Expat (aka libexpat) before 2.4.3 has an integer overflow.",
-          "Severity": "MEDIUM",
-          "CweIDs": [
-            "CWE-190"
-          ],
-          "CVSS": {
-            "nvd": {
-              "V2Vector": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
-              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-              "V2Score": 7.5,
-              "V3Score": 9.8
-            },
-            "redhat": {
-              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-              "V3Score": 9.8
-            }
-          },
-          "References": [
-            "http://www.openwall.com/lists/oss-security/2022/01/17/3",
-            "https://access.redhat.com/security/cve/CVE-2022-22822",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-22822",
-            "https://github.com/libexpat/libexpat/pull/539",
-            "https://linux.oracle.com/cve/CVE-2022-22822.html",
-            "https://linux.oracle.com/errata/ELSA-2022-1069.html",
-            "https://nvd.nist.gov/vuln/detail/CVE-2022-22822",
-            "https://ubuntu.com/security/notices/USN-5288-1",
-            "https://www.debian.org/security/2022/dsa-5073",
-            "https://www.tenable.com/security/tns-2022-05"
-          ],
-          "PublishedDate": "2022-01-10T14:12:00Z",
-          "LastModifiedDate": "2022-02-25T18:49:00Z"
-        },
-        {
-          "VulnerabilityID": "CVE-2022-22823",
-          "PkgName": "expat",
-          "InstalledVersion": "2.2.5-4.el8_5.3",
-          "Layer": {
-            "Digest": "sha256:77021c8c5a2c26b7370f701db23765e7059b1a663de3e38496a8a147c7b159cb",
-            "DiffID": "sha256:eebc402c78edcee75e73ea20095f6314595e0b728e2caf2920def8663c172a4f"
-          },
-          "SeveritySource": "redhat",
-          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-22823",
-          "Title": "expat: Integer overflow in build_model in xmlparse.c",
-          "Description": "build_model in xmlparse.c in Expat (aka libexpat) before 2.4.3 has an integer overflow.",
-          "Severity": "MEDIUM",
-          "CweIDs": [
-            "CWE-190"
-          ],
-          "CVSS": {
-            "nvd": {
-              "V2Vector": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
-              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-              "V2Score": 7.5,
-              "V3Score": 9.8
-            },
-            "redhat": {
-              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-              "V3Score": 9.8
-            }
-          },
-          "References": [
-            "http://www.openwall.com/lists/oss-security/2022/01/17/3",
-            "https://access.redhat.com/security/cve/CVE-2022-22823",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-22823",
-            "https://github.com/libexpat/libexpat/pull/539",
-            "https://linux.oracle.com/cve/CVE-2022-22823.html",
-            "https://linux.oracle.com/errata/ELSA-2022-1069.html",
-            "https://nvd.nist.gov/vuln/detail/CVE-2022-22823",
-            "https://ubuntu.com/security/notices/USN-5288-1",
-            "https://www.debian.org/security/2022/dsa-5073",
-            "https://www.tenable.com/security/tns-2022-05"
-          ],
-          "PublishedDate": "2022-01-10T14:12:00Z",
-          "LastModifiedDate": "2022-02-25T18:49:00Z"
-        },
-        {
-          "VulnerabilityID": "CVE-2022-22824",
-          "PkgName": "expat",
-          "InstalledVersion": "2.2.5-4.el8_5.3",
-          "Layer": {
-            "Digest": "sha256:77021c8c5a2c26b7370f701db23765e7059b1a663de3e38496a8a147c7b159cb",
-            "DiffID": "sha256:eebc402c78edcee75e73ea20095f6314595e0b728e2caf2920def8663c172a4f"
-          },
-          "SeveritySource": "redhat",
-          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-22824",
-          "Title": "expat: Integer overflow in defineAttribute in xmlparse.c",
-          "Description": "defineAttribute in xmlparse.c in Expat (aka libexpat) before 2.4.3 has an integer overflow.",
-          "Severity": "MEDIUM",
-          "CweIDs": [
-            "CWE-190"
-          ],
-          "CVSS": {
-            "nvd": {
-              "V2Vector": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
-              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-              "V2Score": 7.5,
-              "V3Score": 9.8
-            },
-            "redhat": {
-              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-              "V3Score": 9.8
-            }
-          },
-          "References": [
-            "http://www.openwall.com/lists/oss-security/2022/01/17/3",
-            "https://access.redhat.com/security/cve/CVE-2022-22824",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-22824",
-            "https://github.com/libexpat/libexpat/pull/539",
-            "https://linux.oracle.com/cve/CVE-2022-22824.html",
-            "https://linux.oracle.com/errata/ELSA-2022-1069.html",
-            "https://nvd.nist.gov/vuln/detail/CVE-2022-22824",
-            "https://ubuntu.com/security/notices/USN-5288-1",
-            "https://www.debian.org/security/2022/dsa-5073",
-            "https://www.tenable.com/security/tns-2022-05"
-          ],
-          "PublishedDate": "2022-01-10T14:12:00Z",
-          "LastModifiedDate": "2022-02-25T18:49:00Z"
-        },
-        {
-          "VulnerabilityID": "CVE-2022-22825",
-          "PkgName": "expat",
-          "InstalledVersion": "2.2.5-4.el8_5.3",
-          "Layer": {
-            "Digest": "sha256:77021c8c5a2c26b7370f701db23765e7059b1a663de3e38496a8a147c7b159cb",
-            "DiffID": "sha256:eebc402c78edcee75e73ea20095f6314595e0b728e2caf2920def8663c172a4f"
-          },
-          "SeveritySource": "redhat",
-          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-22825",
-          "Title": "expat: Integer overflow in lookup in xmlparse.c",
-          "Description": "lookup in xmlparse.c in Expat (aka libexpat) before 2.4.3 has an integer overflow.",
-          "Severity": "MEDIUM",
-          "CweIDs": [
-            "CWE-190"
-          ],
-          "CVSS": {
-            "nvd": {
-              "V2Vector": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
-              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-              "V2Score": 6.8,
-              "V3Score": 8.8
-            },
-            "redhat": {
-              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-              "V3Score": 8.8
-            }
-          },
-          "References": [
-            "http://www.openwall.com/lists/oss-security/2022/01/17/3",
-            "https://access.redhat.com/security/cve/CVE-2022-22825",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-22825",
-            "https://github.com/libexpat/libexpat/pull/539",
-            "https://linux.oracle.com/cve/CVE-2022-22825.html",
-            "https://linux.oracle.com/errata/ELSA-2022-1069.html",
-            "https://nvd.nist.gov/vuln/detail/CVE-2022-22825",
-            "https://ubuntu.com/security/notices/USN-5288-1",
-            "https://www.debian.org/security/2022/dsa-5073",
-            "https://www.tenable.com/security/tns-2022-05"
-          ],
-          "PublishedDate": "2022-01-10T14:12:00Z",
-          "LastModifiedDate": "2022-02-25T18:50:00Z"
-        },
-        {
-          "VulnerabilityID": "CVE-2022-22826",
-          "PkgName": "expat",
-          "InstalledVersion": "2.2.5-4.el8_5.3",
-          "Layer": {
-            "Digest": "sha256:77021c8c5a2c26b7370f701db23765e7059b1a663de3e38496a8a147c7b159cb",
-            "DiffID": "sha256:eebc402c78edcee75e73ea20095f6314595e0b728e2caf2920def8663c172a4f"
-          },
-          "SeveritySource": "redhat",
-          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-22826",
-          "Title": "expat: Integer overflow in nextScaffoldPart in xmlparse.c",
-          "Description": "nextScaffoldPart in xmlparse.c in Expat (aka libexpat) before 2.4.3 has an integer overflow.",
-          "Severity": "MEDIUM",
-          "CweIDs": [
-            "CWE-190"
-          ],
-          "CVSS": {
-            "nvd": {
-              "V2Vector": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
-              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-              "V2Score": 6.8,
-              "V3Score": 8.8
-            },
-            "redhat": {
-              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-              "V3Score": 8.8
-            }
-          },
-          "References": [
-            "http://www.openwall.com/lists/oss-security/2022/01/17/3",
-            "https://access.redhat.com/security/cve/CVE-2022-22826",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-22826",
-            "https://github.com/libexpat/libexpat/pull/539",
-            "https://linux.oracle.com/cve/CVE-2022-22826.html",
-            "https://linux.oracle.com/errata/ELSA-2022-1069.html",
-            "https://nvd.nist.gov/vuln/detail/CVE-2022-22826",
-            "https://ubuntu.com/security/notices/USN-5288-1",
-            "https://www.debian.org/security/2022/dsa-5073",
-            "https://www.tenable.com/security/tns-2022-05"
-          ],
-          "PublishedDate": "2022-01-10T14:12:00Z",
-          "LastModifiedDate": "2022-02-25T18:51:00Z"
-        },
-        {
-          "VulnerabilityID": "CVE-2022-22827",
-          "PkgName": "expat",
-          "InstalledVersion": "2.2.5-4.el8_5.3",
-          "Layer": {
-            "Digest": "sha256:77021c8c5a2c26b7370f701db23765e7059b1a663de3e38496a8a147c7b159cb",
-            "DiffID": "sha256:eebc402c78edcee75e73ea20095f6314595e0b728e2caf2920def8663c172a4f"
-          },
-          "SeveritySource": "redhat",
-          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-22827",
-          "Title": "expat: Integer overflow in storeAtts in xmlparse.c",
-          "Description": "storeAtts in xmlparse.c in Expat (aka libexpat) before 2.4.3 has an integer overflow.",
-          "Severity": "MEDIUM",
-          "CweIDs": [
-            "CWE-190"
-          ],
-          "CVSS": {
-            "nvd": {
-              "V2Vector": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
-              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-              "V2Score": 6.8,
-              "V3Score": 8.8
-            },
-            "redhat": {
-              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-              "V3Score": 8.8
-            }
-          },
-          "References": [
-            "http://www.openwall.com/lists/oss-security/2022/01/17/3",
-            "https://access.redhat.com/security/cve/CVE-2022-22827",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-22827",
-            "https://github.com/libexpat/libexpat/pull/539",
-            "https://linux.oracle.com/cve/CVE-2022-22827.html",
-            "https://linux.oracle.com/errata/ELSA-2022-1069.html",
-            "https://nvd.nist.gov/vuln/detail/CVE-2022-22827",
-            "https://ubuntu.com/security/notices/USN-5288-1",
-            "https://www.debian.org/security/2022/dsa-5073",
-            "https://www.tenable.com/security/tns-2022-05"
-          ],
-          "PublishedDate": "2022-01-10T14:12:00Z",
-          "LastModifiedDate": "2022-02-25T18:50:00Z"
-        },
-        {
           "VulnerabilityID": "CVE-2022-25314",
           "PkgName": "expat",
-          "InstalledVersion": "2.2.5-4.el8_5.3",
+          "InstalledVersion": "2.2.5-8.el8",
           "Layer": {
-            "Digest": "sha256:77021c8c5a2c26b7370f701db23765e7059b1a663de3e38496a8a147c7b159cb",
-            "DiffID": "sha256:eebc402c78edcee75e73ea20095f6314595e0b728e2caf2920def8663c172a4f"
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-25314",
@@ -972,8 +588,8 @@
           "PkgName": "file-libs",
           "InstalledVersion": "5.33-20.el8",
           "Layer": {
-            "Digest": "sha256:ac56bdc7f9934acede05653e9e01e73e961c31818b522c0732ad35350bb3a82b",
-            "DiffID": "sha256:0d3f22d60daf4a2421b2239fb0e1c6ec02d3787274db8b098fb648941ea2d5dc"
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2019-8905",
@@ -1014,8 +630,8 @@
           "PkgName": "file-libs",
           "InstalledVersion": "5.33-20.el8",
           "Layer": {
-            "Digest": "sha256:ac56bdc7f9934acede05653e9e01e73e961c31818b522c0732ad35350bb3a82b",
-            "DiffID": "sha256:0d3f22d60daf4a2421b2239fb0e1c6ec02d3787274db8b098fb648941ea2d5dc"
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2019-8906",
@@ -1057,10 +673,10 @@
         {
           "VulnerabilityID": "CVE-2018-16428",
           "PkgName": "glib2",
-          "InstalledVersion": "2.56.4-156.el8",
+          "InstalledVersion": "2.56.4-158.el8",
           "Layer": {
-            "Digest": "sha256:ac56bdc7f9934acede05653e9e01e73e961c31818b522c0732ad35350bb3a82b",
-            "DiffID": "sha256:0d3f22d60daf4a2421b2239fb0e1c6ec02d3787274db8b098fb648941ea2d5dc"
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2018-16428",
@@ -1103,8 +719,8 @@
           "PkgName": "gmp",
           "InstalledVersion": "1:6.1.2-10.el8",
           "Layer": {
-            "Digest": "sha256:ac56bdc7f9934acede05653e9e01e73e961c31818b522c0732ad35350bb3a82b",
-            "DiffID": "sha256:0d3f22d60daf4a2421b2239fb0e1c6ec02d3787274db8b098fb648941ea2d5dc"
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-43618",
@@ -1143,8 +759,8 @@
           "PkgName": "gnutls",
           "InstalledVersion": "3.6.16-4.el8",
           "Layer": {
-            "Digest": "sha256:ac56bdc7f9934acede05653e9e01e73e961c31818b522c0732ad35350bb3a82b",
-            "DiffID": "sha256:0d3f22d60daf4a2421b2239fb0e1c6ec02d3787274db8b098fb648941ea2d5dc"
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-4209",
@@ -1166,8 +782,8 @@
           "PkgName": "krb5-libs",
           "InstalledVersion": "1.18.2-14.el8",
           "Layer": {
-            "Digest": "sha256:ac56bdc7f9934acede05653e9e01e73e961c31818b522c0732ad35350bb3a82b",
-            "DiffID": "sha256:0d3f22d60daf4a2421b2239fb0e1c6ec02d3787274db8b098fb648941ea2d5dc"
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2020-17049",
@@ -1196,50 +812,12 @@
           "LastModifiedDate": "2021-11-30T22:22:00Z"
         },
         {
-          "VulnerabilityID": "CVE-2022-26280",
-          "PkgName": "libarchive",
-          "InstalledVersion": "3.3.3-3.el8_5",
-          "Layer": {
-            "Digest": "sha256:77021c8c5a2c26b7370f701db23765e7059b1a663de3e38496a8a147c7b159cb",
-            "DiffID": "sha256:eebc402c78edcee75e73ea20095f6314595e0b728e2caf2920def8663c172a4f"
-          },
-          "SeveritySource": "redhat",
-          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-26280",
-          "Title": "libarchive: an out-of-bounds read via the component zipx_lzma_alone_init",
-          "Description": "Libarchive v3.6.0 was discovered to contain an out-of-bounds read via the component zipx_lzma_alone_init.",
-          "Severity": "HIGH",
-          "CweIDs": [
-            "CWE-125"
-          ],
-          "CVSS": {
-            "nvd": {
-              "V2Vector": "AV:N/AC:L/Au:N/C:P/I:N/A:P",
-              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H",
-              "V2Score": 6.4,
-              "V3Score": 9.1
-            },
-            "redhat": {
-              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-              "V3Score": 8.8
-            }
-          },
-          "References": [
-            "https://access.redhat.com/security/cve/CVE-2022-26280",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-26280",
-            "https://github.com/libarchive/libarchive/issues/1672",
-            "https://nvd.nist.gov/vuln/detail/CVE-2022-26280",
-            "https://ubuntu.com/security/notices/USN-5374-1"
-          ],
-          "PublishedDate": "2022-03-28T22:15:00Z",
-          "LastModifiedDate": "2022-04-05T15:18:00Z"
-        },
-        {
           "VulnerabilityID": "CVE-2020-21674",
           "PkgName": "libarchive",
           "InstalledVersion": "3.3.3-3.el8_5",
           "Layer": {
-            "Digest": "sha256:77021c8c5a2c26b7370f701db23765e7059b1a663de3e38496a8a147c7b159cb",
-            "DiffID": "sha256:eebc402c78edcee75e73ea20095f6314595e0b728e2caf2920def8663c172a4f"
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2020-21674",
@@ -1274,8 +852,8 @@
           "PkgName": "libarchive",
           "InstalledVersion": "3.3.3-3.el8_5",
           "Layer": {
-            "Digest": "sha256:77021c8c5a2c26b7370f701db23765e7059b1a663de3e38496a8a147c7b159cb",
-            "DiffID": "sha256:eebc402c78edcee75e73ea20095f6314595e0b728e2caf2920def8663c172a4f"
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2017-14166",
@@ -1317,8 +895,8 @@
           "PkgName": "libarchive",
           "InstalledVersion": "3.3.3-3.el8_5",
           "Layer": {
-            "Digest": "sha256:77021c8c5a2c26b7370f701db23765e7059b1a663de3e38496a8a147c7b159cb",
-            "DiffID": "sha256:eebc402c78edcee75e73ea20095f6314595e0b728e2caf2920def8663c172a4f"
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2017-14501",
@@ -1359,8 +937,8 @@
           "PkgName": "libarchive",
           "InstalledVersion": "3.3.3-3.el8_5",
           "Layer": {
-            "Digest": "sha256:77021c8c5a2c26b7370f701db23765e7059b1a663de3e38496a8a147c7b159cb",
-            "DiffID": "sha256:eebc402c78edcee75e73ea20095f6314595e0b728e2caf2920def8663c172a4f"
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2018-1000879",
@@ -1401,8 +979,8 @@
           "PkgName": "libarchive",
           "InstalledVersion": "3.3.3-3.el8_5",
           "Layer": {
-            "Digest": "sha256:77021c8c5a2c26b7370f701db23765e7059b1a663de3e38496a8a147c7b159cb",
-            "DiffID": "sha256:eebc402c78edcee75e73ea20095f6314595e0b728e2caf2920def8663c172a4f"
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2018-1000880",
@@ -1445,10 +1023,10 @@
         {
           "VulnerabilityID": "CVE-2022-1304",
           "PkgName": "libcom_err",
-          "InstalledVersion": "1.45.6-2.el8",
+          "InstalledVersion": "1.45.6-4.el8",
           "Layer": {
-            "Digest": "sha256:ac56bdc7f9934acede05653e9e01e73e961c31818b522c0732ad35350bb3a82b",
-            "DiffID": "sha256:0d3f22d60daf4a2421b2239fb0e1c6ec02d3787274db8b098fb648941ea2d5dc"
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-1304",
@@ -1486,8 +1064,8 @@
           "PkgName": "libcurl",
           "InstalledVersion": "7.61.1-22.el8",
           "Layer": {
-            "Digest": "sha256:ac56bdc7f9934acede05653e9e01e73e961c31818b522c0732ad35350bb3a82b",
-            "DiffID": "sha256:0d3f22d60daf4a2421b2239fb0e1c6ec02d3787274db8b098fb648941ea2d5dc"
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-22576",
@@ -1512,8 +1090,8 @@
           "PkgName": "libcurl",
           "InstalledVersion": "7.61.1-22.el8",
           "Layer": {
-            "Digest": "sha256:ac56bdc7f9934acede05653e9e01e73e961c31818b522c0732ad35350bb3a82b",
-            "DiffID": "sha256:0d3f22d60daf4a2421b2239fb0e1c6ec02d3787274db8b098fb648941ea2d5dc"
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-27774",
@@ -1538,8 +1116,8 @@
           "PkgName": "libcurl",
           "InstalledVersion": "7.61.1-22.el8",
           "Layer": {
-            "Digest": "sha256:ac56bdc7f9934acede05653e9e01e73e961c31818b522c0732ad35350bb3a82b",
-            "DiffID": "sha256:0d3f22d60daf4a2421b2239fb0e1c6ec02d3787274db8b098fb648941ea2d5dc"
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-27776",
@@ -1560,12 +1138,38 @@
           ]
         },
         {
+          "VulnerabilityID": "CVE-2022-27782",
+          "PkgName": "libcurl",
+          "InstalledVersion": "7.61.1-22.el8",
+          "Layer": {
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
+          },
+          "SeveritySource": "redhat",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-27782",
+          "Title": "curl: TLS and SSH connection too eager reuse",
+          "Description": "No description is available for this CVE.",
+          "Severity": "MEDIUM",
+          "CVSS": {
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:L/I:L/A:L",
+              "V3Score": 6
+            }
+          },
+          "References": [
+            "https://access.redhat.com/security/cve/CVE-2022-27782",
+            "https://curl.se/docs/CVE-2022-27782.html",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-27782",
+            "https://ubuntu.com/security/notices/USN-5412-1"
+          ]
+        },
+        {
           "VulnerabilityID": "CVE-2018-20673",
           "PkgName": "libgcc",
-          "InstalledVersion": "8.5.0-4.el8_5",
+          "InstalledVersion": "8.5.0-10.el8",
           "Layer": {
-            "Digest": "sha256:77021c8c5a2c26b7370f701db23765e7059b1a663de3e38496a8a147c7b159cb",
-            "DiffID": "sha256:eebc402c78edcee75e73ea20095f6314595e0b728e2caf2920def8663c172a4f"
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2018-20673",
@@ -1601,19 +1205,16 @@
         {
           "VulnerabilityID": "CVE-2021-42694",
           "PkgName": "libgcc",
-          "InstalledVersion": "8.5.0-4.el8_5",
+          "InstalledVersion": "8.5.0-10.el8",
           "Layer": {
-            "Digest": "sha256:77021c8c5a2c26b7370f701db23765e7059b1a663de3e38496a8a147c7b159cb",
-            "DiffID": "sha256:eebc402c78edcee75e73ea20095f6314595e0b728e2caf2920def8663c172a4f"
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-42694",
           "Title": "Developer environment: Homoglyph characters can lead to trojan source attack",
-          "Description": "An issue was discovered in the character definitions of the Unicode Specification through 14.0. The specification allows an adversary to produce source code identifiers such as function names using homoglyphs that render visually identical to a target identifier. Adversaries can leverage this to inject code via adversarial identifier definitions in upstream software dependencies invoked deceptively in downstream software.",
+          "Description": "** DISPUTED ** An issue was discovered in the character definitions of the Unicode Specification through 14.0. The specification allows an adversary to produce source code identifiers such as function names using homoglyphs that render visually identical to a target identifier. Adversaries can leverage this to inject code via adversarial identifier definitions in upstream software dependencies invoked deceptively in downstream software. NOTE: the Unicode Consortium offers the following alternative approach to presenting this concern. An issue is noted in the nature of international text that can affect applications that implement support for The Unicode Standard (all versions). Unless mitigated, an adversary could produce source code identifiers using homoglyph characters that render visually identical to but are distinct from a target identifier. In this way, an adversary could inject adversarial identifier definitions in upstream software that are not detected by human reviewers and are invoked deceptively in downstream software. The Unicode Consortium has documented this class of security vulnerability in its document, Unicode Technical Report #36, Unicode Security Considerations. The Unicode Consortium also provides guidance on mitigations for this class of issues in Unicode Technical Standard #39, Unicode Security Mechanisms.",
           "Severity": "MEDIUM",
-          "CweIDs": [
-            "CWE-94"
-          ],
           "CVSS": {
             "nvd": {
               "V2Vector": "AV:N/AC:H/Au:N/C:P/I:P/A:P",
@@ -1631,23 +1232,26 @@
             "http://www.openwall.com/lists/oss-security/2021/11/01/6",
             "http://www.unicode.org/versions/Unicode14.0.0/",
             "https://access.redhat.com/security/cve/CVE-2021-42694",
+            "https://cwe.mitre.org/data/definitions/1007.html",
             "https://trojansource.codes",
             "https://trojansource.codes/",
             "https://www.kb.cert.org/vuls/id/999008",
             "https://www.lightbluetouchpaper.org/2021/11/01/trojan-source-invisible-vulnerabilities/",
             "https://www.scyon.nl/post/trojans-in-your-source-code",
-            "https://www.unicode.org/reports/tr36/#Canonical_Represenation"
+            "https://www.unicode.org/reports/tr36/",
+            "https://www.unicode.org/reports/tr36/#Canonical_Represenation",
+            "https://www.unicode.org/reports/tr39/"
           ],
           "PublishedDate": "2021-11-01T04:15:00Z",
-          "LastModifiedDate": "2021-11-29T17:23:00Z"
+          "LastModifiedDate": "2022-05-12T15:15:00Z"
         },
         {
           "VulnerabilityID": "CVE-2022-27943",
           "PkgName": "libgcc",
-          "InstalledVersion": "8.5.0-4.el8_5",
+          "InstalledVersion": "8.5.0-10.el8",
           "Layer": {
-            "Digest": "sha256:77021c8c5a2c26b7370f701db23765e7059b1a663de3e38496a8a147c7b159cb",
-            "DiffID": "sha256:eebc402c78edcee75e73ea20095f6314595e0b728e2caf2920def8663c172a4f"
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-27943",
@@ -1680,10 +1284,10 @@
         {
           "VulnerabilityID": "CVE-2018-20657",
           "PkgName": "libgcc",
-          "InstalledVersion": "8.5.0-4.el8_5",
+          "InstalledVersion": "8.5.0-10.el8",
           "Layer": {
-            "Digest": "sha256:77021c8c5a2c26b7370f701db23765e7059b1a663de3e38496a8a147c7b159cb",
-            "DiffID": "sha256:eebc402c78edcee75e73ea20095f6314595e0b728e2caf2920def8663c172a4f"
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2018-20657",
@@ -1721,10 +1325,10 @@
         {
           "VulnerabilityID": "CVE-2019-14250",
           "PkgName": "libgcc",
-          "InstalledVersion": "8.5.0-4.el8_5",
+          "InstalledVersion": "8.5.0-10.el8",
           "Layer": {
-            "Digest": "sha256:77021c8c5a2c26b7370f701db23765e7059b1a663de3e38496a8a147c7b159cb",
-            "DiffID": "sha256:eebc402c78edcee75e73ea20095f6314595e0b728e2caf2920def8663c172a4f"
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2019-14250",
@@ -1775,8 +1379,8 @@
           "PkgName": "libgcrypt",
           "InstalledVersion": "1.8.5-6.el8",
           "Layer": {
-            "Digest": "sha256:ac56bdc7f9934acede05653e9e01e73e961c31818b522c0732ad35350bb3a82b",
-            "DiffID": "sha256:0d3f22d60daf4a2421b2239fb0e1c6ec02d3787274db8b098fb648941ea2d5dc"
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2019-12904",
@@ -1815,8 +1419,8 @@
           "PkgName": "libgcrypt",
           "InstalledVersion": "1.8.5-6.el8",
           "Layer": {
-            "Digest": "sha256:ac56bdc7f9934acede05653e9e01e73e961c31818b522c0732ad35350bb3a82b",
-            "DiffID": "sha256:0d3f22d60daf4a2421b2239fb0e1c6ec02d3787274db8b098fb648941ea2d5dc"
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-40528",
@@ -1856,10 +1460,10 @@
         {
           "VulnerabilityID": "CVE-2021-44568",
           "PkgName": "libsolv",
-          "InstalledVersion": "0.7.19-1.el8",
+          "InstalledVersion": "0.7.20-1.el8",
           "Layer": {
-            "Digest": "sha256:ac56bdc7f9934acede05653e9e01e73e961c31818b522c0732ad35350bb3a82b",
-            "DiffID": "sha256:0d3f22d60daf4a2421b2239fb0e1c6ec02d3787274db8b098fb648941ea2d5dc"
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-44568",
@@ -1893,10 +1497,10 @@
         {
           "VulnerabilityID": "CVE-2021-44569",
           "PkgName": "libsolv",
-          "InstalledVersion": "0.7.19-1.el8",
+          "InstalledVersion": "0.7.20-1.el8",
           "Layer": {
-            "Digest": "sha256:ac56bdc7f9934acede05653e9e01e73e961c31818b522c0732ad35350bb3a82b",
-            "DiffID": "sha256:0d3f22d60daf4a2421b2239fb0e1c6ec02d3787274db8b098fb648941ea2d5dc"
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-44569",
@@ -1926,10 +1530,10 @@
         {
           "VulnerabilityID": "CVE-2021-44570",
           "PkgName": "libsolv",
-          "InstalledVersion": "0.7.19-1.el8",
+          "InstalledVersion": "0.7.20-1.el8",
           "Layer": {
-            "Digest": "sha256:ac56bdc7f9934acede05653e9e01e73e961c31818b522c0732ad35350bb3a82b",
-            "DiffID": "sha256:0d3f22d60daf4a2421b2239fb0e1c6ec02d3787274db8b098fb648941ea2d5dc"
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-44570",
@@ -1960,10 +1564,10 @@
         {
           "VulnerabilityID": "CVE-2021-44571",
           "PkgName": "libsolv",
-          "InstalledVersion": "0.7.19-1.el8",
+          "InstalledVersion": "0.7.20-1.el8",
           "Layer": {
-            "Digest": "sha256:ac56bdc7f9934acede05653e9e01e73e961c31818b522c0732ad35350bb3a82b",
-            "DiffID": "sha256:0d3f22d60daf4a2421b2239fb0e1c6ec02d3787274db8b098fb648941ea2d5dc"
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-44571",
@@ -1993,10 +1597,10 @@
         {
           "VulnerabilityID": "CVE-2021-44573",
           "PkgName": "libsolv",
-          "InstalledVersion": "0.7.19-1.el8",
+          "InstalledVersion": "0.7.20-1.el8",
           "Layer": {
-            "Digest": "sha256:ac56bdc7f9934acede05653e9e01e73e961c31818b522c0732ad35350bb3a82b",
-            "DiffID": "sha256:0d3f22d60daf4a2421b2239fb0e1c6ec02d3787274db8b098fb648941ea2d5dc"
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-44573",
@@ -2027,10 +1631,10 @@
         {
           "VulnerabilityID": "CVE-2021-44574",
           "PkgName": "libsolv",
-          "InstalledVersion": "0.7.19-1.el8",
+          "InstalledVersion": "0.7.20-1.el8",
           "Layer": {
-            "Digest": "sha256:ac56bdc7f9934acede05653e9e01e73e961c31818b522c0732ad35350bb3a82b",
-            "DiffID": "sha256:0d3f22d60daf4a2421b2239fb0e1c6ec02d3787274db8b098fb648941ea2d5dc"
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-44574",
@@ -2064,10 +1668,10 @@
         {
           "VulnerabilityID": "CVE-2021-44575",
           "PkgName": "libsolv",
-          "InstalledVersion": "0.7.19-1.el8",
+          "InstalledVersion": "0.7.20-1.el8",
           "Layer": {
-            "Digest": "sha256:ac56bdc7f9934acede05653e9e01e73e961c31818b522c0732ad35350bb3a82b",
-            "DiffID": "sha256:0d3f22d60daf4a2421b2239fb0e1c6ec02d3787274db8b098fb648941ea2d5dc"
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-44575",
@@ -2098,10 +1702,10 @@
         {
           "VulnerabilityID": "CVE-2021-44576",
           "PkgName": "libsolv",
-          "InstalledVersion": "0.7.19-1.el8",
+          "InstalledVersion": "0.7.20-1.el8",
           "Layer": {
-            "Digest": "sha256:ac56bdc7f9934acede05653e9e01e73e961c31818b522c0732ad35350bb3a82b",
-            "DiffID": "sha256:0d3f22d60daf4a2421b2239fb0e1c6ec02d3787274db8b098fb648941ea2d5dc"
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-44576",
@@ -2133,10 +1737,10 @@
         {
           "VulnerabilityID": "CVE-2021-44577",
           "PkgName": "libsolv",
-          "InstalledVersion": "0.7.19-1.el8",
+          "InstalledVersion": "0.7.20-1.el8",
           "Layer": {
-            "Digest": "sha256:ac56bdc7f9934acede05653e9e01e73e961c31818b522c0732ad35350bb3a82b",
-            "DiffID": "sha256:0d3f22d60daf4a2421b2239fb0e1c6ec02d3787274db8b098fb648941ea2d5dc"
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-44577",
@@ -2165,100 +1769,12 @@
           "LastModifiedDate": "2022-03-08T14:16:00Z"
         },
         {
-          "VulnerabilityID": "CVE-2021-3634",
-          "PkgName": "libssh",
-          "InstalledVersion": "0.9.4-3.el8",
-          "Layer": {
-            "Digest": "sha256:ac56bdc7f9934acede05653e9e01e73e961c31818b522c0732ad35350bb3a82b",
-            "DiffID": "sha256:0d3f22d60daf4a2421b2239fb0e1c6ec02d3787274db8b098fb648941ea2d5dc"
-          },
-          "SeveritySource": "redhat",
-          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-3634",
-          "Title": "libssh: possible heap-based buffer overflow when rekeying",
-          "Description": "A flaw has been found in libssh in versions prior to 0.9.6. The SSH protocol keeps track of two shared secrets during the lifetime of the session. One of them is called secret_hash and the other session_id. Initially, both of them are the same, but after key re-exchange, previous session_id is kept and used as an input to new secret_hash. Historically, both of these buffers had shared length variable, which worked as long as these buffers were same. But the key re-exchange operation can also change the key exchange method, which can be based on hash of different size, eventually creating \"secret_hash\" of different size than the session_id has. This becomes an issue when the session_id memory is zeroed or when it is used again during second key re-exchange.",
-          "Severity": "LOW",
-          "CweIDs": [
-            "CWE-119"
-          ],
-          "CVSS": {
-            "nvd": {
-              "V2Vector": "AV:N/AC:L/Au:S/C:N/I:N/A:P",
-              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
-              "V2Score": 4,
-              "V3Score": 6.5
-            },
-            "redhat": {
-              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:N/I:N/A:L",
-              "V3Score": 3.5
-            }
-          },
-          "References": [
-            "https://access.redhat.com/security/cve/CVE-2021-3634",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=1978810",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3634",
-            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/DRK67AJCWYYVAGF5SGAHNZXCX3PN3ZFP/",
-            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/JKYD3ZRAMDAQX3ZW6THHUF3GXN7FF6B4/",
-            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/SVWAAB2XMKEUMPMDALINKAA4U2QM4LNG/",
-            "https://nvd.nist.gov/vuln/detail/CVE-2021-3634",
-            "https://security.netapp.com/advisory/ntap-20211004-0003/",
-            "https://ubuntu.com/security/notices/USN-5053-1",
-            "https://www.debian.org/security/2021/dsa-4965",
-            "https://www.oracle.com/security-alerts/cpujan2022.html"
-          ],
-          "PublishedDate": "2021-08-31T17:15:00Z",
-          "LastModifiedDate": "2022-04-25T18:12:00Z"
-        },
-        {
-          "VulnerabilityID": "CVE-2021-3634",
-          "PkgName": "libssh-config",
-          "InstalledVersion": "0.9.4-3.el8",
-          "Layer": {
-            "Digest": "sha256:ac56bdc7f9934acede05653e9e01e73e961c31818b522c0732ad35350bb3a82b",
-            "DiffID": "sha256:0d3f22d60daf4a2421b2239fb0e1c6ec02d3787274db8b098fb648941ea2d5dc"
-          },
-          "SeveritySource": "redhat",
-          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-3634",
-          "Title": "libssh: possible heap-based buffer overflow when rekeying",
-          "Description": "A flaw has been found in libssh in versions prior to 0.9.6. The SSH protocol keeps track of two shared secrets during the lifetime of the session. One of them is called secret_hash and the other session_id. Initially, both of them are the same, but after key re-exchange, previous session_id is kept and used as an input to new secret_hash. Historically, both of these buffers had shared length variable, which worked as long as these buffers were same. But the key re-exchange operation can also change the key exchange method, which can be based on hash of different size, eventually creating \"secret_hash\" of different size than the session_id has. This becomes an issue when the session_id memory is zeroed or when it is used again during second key re-exchange.",
-          "Severity": "LOW",
-          "CweIDs": [
-            "CWE-119"
-          ],
-          "CVSS": {
-            "nvd": {
-              "V2Vector": "AV:N/AC:L/Au:S/C:N/I:N/A:P",
-              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
-              "V2Score": 4,
-              "V3Score": 6.5
-            },
-            "redhat": {
-              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:N/I:N/A:L",
-              "V3Score": 3.5
-            }
-          },
-          "References": [
-            "https://access.redhat.com/security/cve/CVE-2021-3634",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=1978810",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3634",
-            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/DRK67AJCWYYVAGF5SGAHNZXCX3PN3ZFP/",
-            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/JKYD3ZRAMDAQX3ZW6THHUF3GXN7FF6B4/",
-            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/SVWAAB2XMKEUMPMDALINKAA4U2QM4LNG/",
-            "https://nvd.nist.gov/vuln/detail/CVE-2021-3634",
-            "https://security.netapp.com/advisory/ntap-20211004-0003/",
-            "https://ubuntu.com/security/notices/USN-5053-1",
-            "https://www.debian.org/security/2021/dsa-4965",
-            "https://www.oracle.com/security-alerts/cpujan2022.html"
-          ],
-          "PublishedDate": "2021-08-31T17:15:00Z",
-          "LastModifiedDate": "2022-04-25T18:12:00Z"
-        },
-        {
           "VulnerabilityID": "CVE-2018-20673",
           "PkgName": "libstdc++",
-          "InstalledVersion": "8.5.0-4.el8_5",
+          "InstalledVersion": "8.5.0-10.el8",
           "Layer": {
-            "Digest": "sha256:77021c8c5a2c26b7370f701db23765e7059b1a663de3e38496a8a147c7b159cb",
-            "DiffID": "sha256:eebc402c78edcee75e73ea20095f6314595e0b728e2caf2920def8663c172a4f"
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2018-20673",
@@ -2294,19 +1810,16 @@
         {
           "VulnerabilityID": "CVE-2021-42694",
           "PkgName": "libstdc++",
-          "InstalledVersion": "8.5.0-4.el8_5",
+          "InstalledVersion": "8.5.0-10.el8",
           "Layer": {
-            "Digest": "sha256:77021c8c5a2c26b7370f701db23765e7059b1a663de3e38496a8a147c7b159cb",
-            "DiffID": "sha256:eebc402c78edcee75e73ea20095f6314595e0b728e2caf2920def8663c172a4f"
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-42694",
           "Title": "Developer environment: Homoglyph characters can lead to trojan source attack",
-          "Description": "An issue was discovered in the character definitions of the Unicode Specification through 14.0. The specification allows an adversary to produce source code identifiers such as function names using homoglyphs that render visually identical to a target identifier. Adversaries can leverage this to inject code via adversarial identifier definitions in upstream software dependencies invoked deceptively in downstream software.",
+          "Description": "** DISPUTED ** An issue was discovered in the character definitions of the Unicode Specification through 14.0. The specification allows an adversary to produce source code identifiers such as function names using homoglyphs that render visually identical to a target identifier. Adversaries can leverage this to inject code via adversarial identifier definitions in upstream software dependencies invoked deceptively in downstream software. NOTE: the Unicode Consortium offers the following alternative approach to presenting this concern. An issue is noted in the nature of international text that can affect applications that implement support for The Unicode Standard (all versions). Unless mitigated, an adversary could produce source code identifiers using homoglyph characters that render visually identical to but are distinct from a target identifier. In this way, an adversary could inject adversarial identifier definitions in upstream software that are not detected by human reviewers and are invoked deceptively in downstream software. The Unicode Consortium has documented this class of security vulnerability in its document, Unicode Technical Report #36, Unicode Security Considerations. The Unicode Consortium also provides guidance on mitigations for this class of issues in Unicode Technical Standard #39, Unicode Security Mechanisms.",
           "Severity": "MEDIUM",
-          "CweIDs": [
-            "CWE-94"
-          ],
           "CVSS": {
             "nvd": {
               "V2Vector": "AV:N/AC:H/Au:N/C:P/I:P/A:P",
@@ -2324,23 +1837,26 @@
             "http://www.openwall.com/lists/oss-security/2021/11/01/6",
             "http://www.unicode.org/versions/Unicode14.0.0/",
             "https://access.redhat.com/security/cve/CVE-2021-42694",
+            "https://cwe.mitre.org/data/definitions/1007.html",
             "https://trojansource.codes",
             "https://trojansource.codes/",
             "https://www.kb.cert.org/vuls/id/999008",
             "https://www.lightbluetouchpaper.org/2021/11/01/trojan-source-invisible-vulnerabilities/",
             "https://www.scyon.nl/post/trojans-in-your-source-code",
-            "https://www.unicode.org/reports/tr36/#Canonical_Represenation"
+            "https://www.unicode.org/reports/tr36/",
+            "https://www.unicode.org/reports/tr36/#Canonical_Represenation",
+            "https://www.unicode.org/reports/tr39/"
           ],
           "PublishedDate": "2021-11-01T04:15:00Z",
-          "LastModifiedDate": "2021-11-29T17:23:00Z"
+          "LastModifiedDate": "2022-05-12T15:15:00Z"
         },
         {
           "VulnerabilityID": "CVE-2022-27943",
           "PkgName": "libstdc++",
-          "InstalledVersion": "8.5.0-4.el8_5",
+          "InstalledVersion": "8.5.0-10.el8",
           "Layer": {
-            "Digest": "sha256:77021c8c5a2c26b7370f701db23765e7059b1a663de3e38496a8a147c7b159cb",
-            "DiffID": "sha256:eebc402c78edcee75e73ea20095f6314595e0b728e2caf2920def8663c172a4f"
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-27943",
@@ -2373,10 +1889,10 @@
         {
           "VulnerabilityID": "CVE-2018-20657",
           "PkgName": "libstdc++",
-          "InstalledVersion": "8.5.0-4.el8_5",
+          "InstalledVersion": "8.5.0-10.el8",
           "Layer": {
-            "Digest": "sha256:77021c8c5a2c26b7370f701db23765e7059b1a663de3e38496a8a147c7b159cb",
-            "DiffID": "sha256:eebc402c78edcee75e73ea20095f6314595e0b728e2caf2920def8663c172a4f"
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2018-20657",
@@ -2414,10 +1930,10 @@
         {
           "VulnerabilityID": "CVE-2019-14250",
           "PkgName": "libstdc++",
-          "InstalledVersion": "8.5.0-4.el8_5",
+          "InstalledVersion": "8.5.0-10.el8",
           "Layer": {
-            "Digest": "sha256:77021c8c5a2c26b7370f701db23765e7059b1a663de3e38496a8a147c7b159cb",
-            "DiffID": "sha256:eebc402c78edcee75e73ea20095f6314595e0b728e2caf2920def8663c172a4f"
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2019-14250",
@@ -2468,8 +1984,8 @@
           "PkgName": "libtasn1",
           "InstalledVersion": "4.13-3.el8",
           "Layer": {
-            "Digest": "sha256:ac56bdc7f9934acede05653e9e01e73e961c31818b522c0732ad35350bb3a82b",
-            "DiffID": "sha256:0d3f22d60daf4a2421b2239fb0e1c6ec02d3787274db8b098fb648941ea2d5dc"
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2018-1000654",
@@ -2502,12 +2018,60 @@
           "LastModifiedDate": "2021-02-25T17:15:00Z"
         },
         {
+          "VulnerabilityID": "CVE-2022-29824",
+          "PkgName": "libxml2",
+          "InstalledVersion": "2.9.7-13.el8",
+          "Layer": {
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
+          },
+          "SeveritySource": "redhat",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-29824",
+          "Title": "libxml2: integer overflows in xmlBuf and xmlBuffer lead to out-of-bounds write",
+          "Description": "In libxml2 before 2.9.14, several buffer handling functions in buf.c (xmlBuf*) and tree.c (xmlBuffer*) don't check for integer overflows. This can result in out-of-bounds memory writes. Exploitation requires a victim to open a crafted, multi-gigabyte XML file. Other software using libxml2's buffer functions, for example libxslt through 1.1.35, is affected as well.",
+          "Severity": "MEDIUM",
+          "CweIDs": [
+            "CWE-190"
+          ],
+          "CVSS": {
+            "nvd": {
+              "V2Vector": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "V2Score": 4.3,
+              "V3Score": 6.5
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:H",
+              "V3Score": 7.4
+            }
+          },
+          "References": [
+            "https://access.redhat.com/security/cve/CVE-2022-29824",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-29824",
+            "https://gitlab.gnome.org/GNOME/libxml2/-/commit/2554a2408e09f13652049e5ffb0d26196b02ebab",
+            "https://gitlab.gnome.org/GNOME/libxml2/-/commit/2554a2408e09f13652049e5ffb0d26196b02ebab (v2.9.14)",
+            "https://gitlab.gnome.org/GNOME/libxml2/-/commit/6c283d83eccd940bcde15634ac8c7f100e3caefd",
+            "https://gitlab.gnome.org/GNOME/libxml2/-/commit/6c283d83eccd940bcde15634ac8c7f100e3caefd (master)",
+            "https://gitlab.gnome.org/GNOME/libxml2/-/tags/v2.9.14",
+            "https://gitlab.gnome.org/GNOME/libxslt/-/tags",
+            "https://lists.debian.org/debian-lts-announce/2022/05/msg00023.html",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/FZOBT5Y6Y2QLDDX2HZGMV7MJMWGXORKK/",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/P3NVZVWFRBXBI3AKZZWUWY6INQQPQVSF/",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/P5363EDV5VHZ5C77ODA43RYDCPMA7ARM/",
+            "https://nvd.nist.gov/vuln/detail/CVE-2022-29824",
+            "https://ubuntu.com/security/notices/USN-5422-1",
+            "https://www.debian.org/security/2022/dsa-5142"
+          ],
+          "PublishedDate": "2022-05-03T03:15:00Z",
+          "LastModifiedDate": "2022-05-23T11:16:00Z"
+        },
+        {
           "VulnerabilityID": "CVE-2021-24032",
           "PkgName": "libzstd",
           "InstalledVersion": "1.4.4-1.el8",
           "Layer": {
-            "Digest": "sha256:ac56bdc7f9934acede05653e9e01e73e961c31818b522c0732ad35350bb3a82b",
-            "DiffID": "sha256:0d3f22d60daf4a2421b2239fb0e1c6ec02d3787274db8b098fb648941ea2d5dc"
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-24032",
@@ -2546,8 +2110,8 @@
           "PkgName": "lz4-libs",
           "InstalledVersion": "1.8.3-3.el8_4",
           "Layer": {
-            "Digest": "sha256:ac56bdc7f9934acede05653e9e01e73e961c31818b522c0732ad35350bb3a82b",
-            "DiffID": "sha256:0d3f22d60daf4a2421b2239fb0e1c6ec02d3787274db8b098fb648941ea2d5dc"
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2019-17543",
@@ -2598,8 +2162,8 @@
           "PkgName": "ncurses-base",
           "InstalledVersion": "6.1-9.20180224.el8",
           "Layer": {
-            "Digest": "sha256:ac56bdc7f9934acede05653e9e01e73e961c31818b522c0732ad35350bb3a82b",
-            "DiffID": "sha256:0d3f22d60daf4a2421b2239fb0e1c6ec02d3787274db8b098fb648941ea2d5dc"
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-39537",
@@ -2636,8 +2200,8 @@
           "PkgName": "ncurses-base",
           "InstalledVersion": "6.1-9.20180224.el8",
           "Layer": {
-            "Digest": "sha256:ac56bdc7f9934acede05653e9e01e73e961c31818b522c0732ad35350bb3a82b",
-            "DiffID": "sha256:0d3f22d60daf4a2421b2239fb0e1c6ec02d3787274db8b098fb648941ea2d5dc"
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2018-19211",
@@ -2671,8 +2235,8 @@
           "PkgName": "ncurses-base",
           "InstalledVersion": "6.1-9.20180224.el8",
           "Layer": {
-            "Digest": "sha256:ac56bdc7f9934acede05653e9e01e73e961c31818b522c0732ad35350bb3a82b",
-            "DiffID": "sha256:0d3f22d60daf4a2421b2239fb0e1c6ec02d3787274db8b098fb648941ea2d5dc"
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2018-19217",
@@ -2706,8 +2270,8 @@
           "PkgName": "ncurses-libs",
           "InstalledVersion": "6.1-9.20180224.el8",
           "Layer": {
-            "Digest": "sha256:ac56bdc7f9934acede05653e9e01e73e961c31818b522c0732ad35350bb3a82b",
-            "DiffID": "sha256:0d3f22d60daf4a2421b2239fb0e1c6ec02d3787274db8b098fb648941ea2d5dc"
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-39537",
@@ -2744,8 +2308,8 @@
           "PkgName": "ncurses-libs",
           "InstalledVersion": "6.1-9.20180224.el8",
           "Layer": {
-            "Digest": "sha256:ac56bdc7f9934acede05653e9e01e73e961c31818b522c0732ad35350bb3a82b",
-            "DiffID": "sha256:0d3f22d60daf4a2421b2239fb0e1c6ec02d3787274db8b098fb648941ea2d5dc"
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2018-19211",
@@ -2779,8 +2343,8 @@
           "PkgName": "ncurses-libs",
           "InstalledVersion": "6.1-9.20180224.el8",
           "Layer": {
-            "Digest": "sha256:ac56bdc7f9934acede05653e9e01e73e961c31818b522c0732ad35350bb3a82b",
-            "DiffID": "sha256:0d3f22d60daf4a2421b2239fb0e1c6ec02d3787274db8b098fb648941ea2d5dc"
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2018-19217",
@@ -2810,54 +2374,42 @@
           "LastModifiedDate": "2019-04-18T16:29:00Z"
         },
         {
-          "VulnerabilityID": "CVE-2021-3580",
-          "PkgName": "nettle",
-          "InstalledVersion": "3.4.1-7.el8",
+          "VulnerabilityID": "CVE-2021-43529",
+          "PkgName": "nss",
+          "InstalledVersion": "3.67.0-7.el8_5",
           "Layer": {
-            "Digest": "sha256:ac56bdc7f9934acede05653e9e01e73e961c31818b522c0732ad35350bb3a82b",
-            "DiffID": "sha256:0d3f22d60daf4a2421b2239fb0e1c6ec02d3787274db8b098fb648941ea2d5dc"
+            "Digest": "sha256:16a83da94125b9b04f5b8db90b38026292bba1e571413ba5a19fa435bb6190ab",
+            "DiffID": "sha256:7411c1b6233173b1ea484659ca16541c80bceb3da903f3a8e39173a79b010b88"
           },
           "SeveritySource": "redhat",
-          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-3580",
-          "Title": "nettle: Remote crash in RSA decryption via manipulated ciphertext",
-          "Description": "A flaw was found in the way nettle's RSA decryption functions handled specially crafted ciphertext. An attacker could use this flaw to provide a manipulated ciphertext leading to application crash and denial of service.",
-          "Severity": "MEDIUM",
-          "CweIDs": [
-            "CWE-20"
-          ],
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-43529",
+          "Title": "thunderbird: Memory corruption when processing S/MIME messages",
+          "Description": "A flaw was found in Thunderbird, which is vulnerable to the heap overflow described in CVE-2021-43527 when processing S/MIME messages. Thunderbird versions 91.3.0 and later will not call the vulnerable code when processing S/MIME messages that contain certificates with DER-encoded DSA or RSA-PSS signatures.",
+          "Severity": "CRITICAL",
           "CVSS": {
-            "nvd": {
-              "V2Vector": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
-              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-              "V2Score": 5,
-              "V3Score": 7.5
-            },
             "redhat": {
-              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-              "V3Score": 7.5
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "V3Score": 9.8
             }
           },
           "References": [
-            "https://access.redhat.com/security/cve/CVE-2021-3580",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=1967983",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3580",
-            "https://linux.oracle.com/cve/CVE-2021-3580.html",
-            "https://linux.oracle.com/errata/ELSA-2022-9221.html",
-            "https://lists.debian.org/debian-lts-announce/2021/09/msg00008.html",
-            "https://nvd.nist.gov/vuln/detail/CVE-2021-3580",
-            "https://security.netapp.com/advisory/ntap-20211104-0006/",
-            "https://ubuntu.com/security/notices/USN-4990-1"
-          ],
-          "PublishedDate": "2021-08-05T21:15:00Z",
-          "LastModifiedDate": "2021-11-26T21:06:00Z"
+            "https://access.redhat.com/security/cve/CVE-2021-43527",
+            "https://access.redhat.com/security/cve/CVE-2021-43529",
+            "https://access.redhat.com/security/vulnerabilities/RHSB-2021-008",
+            "https://bugzilla.mozilla.org/show_bug.cgi?id=1738501",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-43529",
+            "https://googleprojectzero.blogspot.com/2021/12/this-shouldnt-have-happened.html",
+            "https://www.mozilla.org/en-US/security/advisories/mfsa2021-51/",
+            "https://www.openwall.com/lists/oss-security/2021/12/01/6"
+          ]
         },
         {
           "VulnerabilityID": "CVE-2020-12401",
           "PkgName": "nss",
           "InstalledVersion": "3.67.0-7.el8_5",
           "Layer": {
-            "Digest": "sha256:77021c8c5a2c26b7370f701db23765e7059b1a663de3e38496a8a147c7b159cb",
-            "DiffID": "sha256:eebc402c78edcee75e73ea20095f6314595e0b728e2caf2920def8663c172a4f"
+            "Digest": "sha256:16a83da94125b9b04f5b8db90b38026292bba1e571413ba5a19fa435bb6190ab",
+            "DiffID": "sha256:7411c1b6233173b1ea484659ca16541c80bceb3da903f3a8e39173a79b010b88"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2020-12401",
@@ -2900,8 +2452,8 @@
           "PkgName": "nss",
           "InstalledVersion": "3.67.0-7.el8_5",
           "Layer": {
-            "Digest": "sha256:77021c8c5a2c26b7370f701db23765e7059b1a663de3e38496a8a147c7b159cb",
-            "DiffID": "sha256:eebc402c78edcee75e73ea20095f6314595e0b728e2caf2920def8663c172a4f"
+            "Digest": "sha256:16a83da94125b9b04f5b8db90b38026292bba1e571413ba5a19fa435bb6190ab",
+            "DiffID": "sha256:7411c1b6233173b1ea484659ca16541c80bceb3da903f3a8e39173a79b010b88"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2020-12413",
@@ -2918,6 +2470,36 @@
             "Raccoon Attack: Finding and Exploiting Most-Significant-Bit-Oracles in TLS-DH(E) by Robert Merget, Marcus Brinkmann, et al.",
             "Thorough Explanation can be found: https://raccoon-attack.com/RacoonAttack.pdf",
             "https://access.redhat.com/security/cve/CVE-2020-12413"
+          ]
+        },
+        {
+          "VulnerabilityID": "CVE-2021-43529",
+          "PkgName": "nss-softokn",
+          "InstalledVersion": "3.67.0-7.el8_5",
+          "Layer": {
+            "Digest": "sha256:16a83da94125b9b04f5b8db90b38026292bba1e571413ba5a19fa435bb6190ab",
+            "DiffID": "sha256:7411c1b6233173b1ea484659ca16541c80bceb3da903f3a8e39173a79b010b88"
+          },
+          "SeveritySource": "redhat",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-43529",
+          "Title": "thunderbird: Memory corruption when processing S/MIME messages",
+          "Description": "A flaw was found in Thunderbird, which is vulnerable to the heap overflow described in CVE-2021-43527 when processing S/MIME messages. Thunderbird versions 91.3.0 and later will not call the vulnerable code when processing S/MIME messages that contain certificates with DER-encoded DSA or RSA-PSS signatures.",
+          "Severity": "CRITICAL",
+          "CVSS": {
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "V3Score": 9.8
+            }
+          },
+          "References": [
+            "https://access.redhat.com/security/cve/CVE-2021-43527",
+            "https://access.redhat.com/security/cve/CVE-2021-43529",
+            "https://access.redhat.com/security/vulnerabilities/RHSB-2021-008",
+            "https://bugzilla.mozilla.org/show_bug.cgi?id=1738501",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-43529",
+            "https://googleprojectzero.blogspot.com/2021/12/this-shouldnt-have-happened.html",
+            "https://www.mozilla.org/en-US/security/advisories/mfsa2021-51/",
+            "https://www.openwall.com/lists/oss-security/2021/12/01/6"
           ]
         },
         {
@@ -2925,8 +2507,8 @@
           "PkgName": "nss-softokn",
           "InstalledVersion": "3.67.0-7.el8_5",
           "Layer": {
-            "Digest": "sha256:77021c8c5a2c26b7370f701db23765e7059b1a663de3e38496a8a147c7b159cb",
-            "DiffID": "sha256:eebc402c78edcee75e73ea20095f6314595e0b728e2caf2920def8663c172a4f"
+            "Digest": "sha256:16a83da94125b9b04f5b8db90b38026292bba1e571413ba5a19fa435bb6190ab",
+            "DiffID": "sha256:7411c1b6233173b1ea484659ca16541c80bceb3da903f3a8e39173a79b010b88"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2020-12401",
@@ -2969,8 +2551,8 @@
           "PkgName": "nss-softokn",
           "InstalledVersion": "3.67.0-7.el8_5",
           "Layer": {
-            "Digest": "sha256:77021c8c5a2c26b7370f701db23765e7059b1a663de3e38496a8a147c7b159cb",
-            "DiffID": "sha256:eebc402c78edcee75e73ea20095f6314595e0b728e2caf2920def8663c172a4f"
+            "Digest": "sha256:16a83da94125b9b04f5b8db90b38026292bba1e571413ba5a19fa435bb6190ab",
+            "DiffID": "sha256:7411c1b6233173b1ea484659ca16541c80bceb3da903f3a8e39173a79b010b88"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2020-12413",
@@ -2987,6 +2569,36 @@
             "Raccoon Attack: Finding and Exploiting Most-Significant-Bit-Oracles in TLS-DH(E) by Robert Merget, Marcus Brinkmann, et al.",
             "Thorough Explanation can be found: https://raccoon-attack.com/RacoonAttack.pdf",
             "https://access.redhat.com/security/cve/CVE-2020-12413"
+          ]
+        },
+        {
+          "VulnerabilityID": "CVE-2021-43529",
+          "PkgName": "nss-softokn-freebl",
+          "InstalledVersion": "3.67.0-7.el8_5",
+          "Layer": {
+            "Digest": "sha256:16a83da94125b9b04f5b8db90b38026292bba1e571413ba5a19fa435bb6190ab",
+            "DiffID": "sha256:7411c1b6233173b1ea484659ca16541c80bceb3da903f3a8e39173a79b010b88"
+          },
+          "SeveritySource": "redhat",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-43529",
+          "Title": "thunderbird: Memory corruption when processing S/MIME messages",
+          "Description": "A flaw was found in Thunderbird, which is vulnerable to the heap overflow described in CVE-2021-43527 when processing S/MIME messages. Thunderbird versions 91.3.0 and later will not call the vulnerable code when processing S/MIME messages that contain certificates with DER-encoded DSA or RSA-PSS signatures.",
+          "Severity": "CRITICAL",
+          "CVSS": {
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "V3Score": 9.8
+            }
+          },
+          "References": [
+            "https://access.redhat.com/security/cve/CVE-2021-43527",
+            "https://access.redhat.com/security/cve/CVE-2021-43529",
+            "https://access.redhat.com/security/vulnerabilities/RHSB-2021-008",
+            "https://bugzilla.mozilla.org/show_bug.cgi?id=1738501",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-43529",
+            "https://googleprojectzero.blogspot.com/2021/12/this-shouldnt-have-happened.html",
+            "https://www.mozilla.org/en-US/security/advisories/mfsa2021-51/",
+            "https://www.openwall.com/lists/oss-security/2021/12/01/6"
           ]
         },
         {
@@ -2994,8 +2606,8 @@
           "PkgName": "nss-softokn-freebl",
           "InstalledVersion": "3.67.0-7.el8_5",
           "Layer": {
-            "Digest": "sha256:77021c8c5a2c26b7370f701db23765e7059b1a663de3e38496a8a147c7b159cb",
-            "DiffID": "sha256:eebc402c78edcee75e73ea20095f6314595e0b728e2caf2920def8663c172a4f"
+            "Digest": "sha256:16a83da94125b9b04f5b8db90b38026292bba1e571413ba5a19fa435bb6190ab",
+            "DiffID": "sha256:7411c1b6233173b1ea484659ca16541c80bceb3da903f3a8e39173a79b010b88"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2020-12401",
@@ -3038,8 +2650,8 @@
           "PkgName": "nss-softokn-freebl",
           "InstalledVersion": "3.67.0-7.el8_5",
           "Layer": {
-            "Digest": "sha256:77021c8c5a2c26b7370f701db23765e7059b1a663de3e38496a8a147c7b159cb",
-            "DiffID": "sha256:eebc402c78edcee75e73ea20095f6314595e0b728e2caf2920def8663c172a4f"
+            "Digest": "sha256:16a83da94125b9b04f5b8db90b38026292bba1e571413ba5a19fa435bb6190ab",
+            "DiffID": "sha256:7411c1b6233173b1ea484659ca16541c80bceb3da903f3a8e39173a79b010b88"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2020-12413",
@@ -3059,12 +2671,42 @@
           ]
         },
         {
+          "VulnerabilityID": "CVE-2021-43529",
+          "PkgName": "nss-sysinit",
+          "InstalledVersion": "3.67.0-7.el8_5",
+          "Layer": {
+            "Digest": "sha256:16a83da94125b9b04f5b8db90b38026292bba1e571413ba5a19fa435bb6190ab",
+            "DiffID": "sha256:7411c1b6233173b1ea484659ca16541c80bceb3da903f3a8e39173a79b010b88"
+          },
+          "SeveritySource": "redhat",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-43529",
+          "Title": "thunderbird: Memory corruption when processing S/MIME messages",
+          "Description": "A flaw was found in Thunderbird, which is vulnerable to the heap overflow described in CVE-2021-43527 when processing S/MIME messages. Thunderbird versions 91.3.0 and later will not call the vulnerable code when processing S/MIME messages that contain certificates with DER-encoded DSA or RSA-PSS signatures.",
+          "Severity": "CRITICAL",
+          "CVSS": {
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "V3Score": 9.8
+            }
+          },
+          "References": [
+            "https://access.redhat.com/security/cve/CVE-2021-43527",
+            "https://access.redhat.com/security/cve/CVE-2021-43529",
+            "https://access.redhat.com/security/vulnerabilities/RHSB-2021-008",
+            "https://bugzilla.mozilla.org/show_bug.cgi?id=1738501",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-43529",
+            "https://googleprojectzero.blogspot.com/2021/12/this-shouldnt-have-happened.html",
+            "https://www.mozilla.org/en-US/security/advisories/mfsa2021-51/",
+            "https://www.openwall.com/lists/oss-security/2021/12/01/6"
+          ]
+        },
+        {
           "VulnerabilityID": "CVE-2020-12401",
           "PkgName": "nss-sysinit",
           "InstalledVersion": "3.67.0-7.el8_5",
           "Layer": {
-            "Digest": "sha256:77021c8c5a2c26b7370f701db23765e7059b1a663de3e38496a8a147c7b159cb",
-            "DiffID": "sha256:eebc402c78edcee75e73ea20095f6314595e0b728e2caf2920def8663c172a4f"
+            "Digest": "sha256:16a83da94125b9b04f5b8db90b38026292bba1e571413ba5a19fa435bb6190ab",
+            "DiffID": "sha256:7411c1b6233173b1ea484659ca16541c80bceb3da903f3a8e39173a79b010b88"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2020-12401",
@@ -3107,8 +2749,8 @@
           "PkgName": "nss-sysinit",
           "InstalledVersion": "3.67.0-7.el8_5",
           "Layer": {
-            "Digest": "sha256:77021c8c5a2c26b7370f701db23765e7059b1a663de3e38496a8a147c7b159cb",
-            "DiffID": "sha256:eebc402c78edcee75e73ea20095f6314595e0b728e2caf2920def8663c172a4f"
+            "Digest": "sha256:16a83da94125b9b04f5b8db90b38026292bba1e571413ba5a19fa435bb6190ab",
+            "DiffID": "sha256:7411c1b6233173b1ea484659ca16541c80bceb3da903f3a8e39173a79b010b88"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2020-12413",
@@ -3128,12 +2770,42 @@
           ]
         },
         {
+          "VulnerabilityID": "CVE-2021-43529",
+          "PkgName": "nss-util",
+          "InstalledVersion": "3.67.0-7.el8_5",
+          "Layer": {
+            "Digest": "sha256:16a83da94125b9b04f5b8db90b38026292bba1e571413ba5a19fa435bb6190ab",
+            "DiffID": "sha256:7411c1b6233173b1ea484659ca16541c80bceb3da903f3a8e39173a79b010b88"
+          },
+          "SeveritySource": "redhat",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-43529",
+          "Title": "thunderbird: Memory corruption when processing S/MIME messages",
+          "Description": "A flaw was found in Thunderbird, which is vulnerable to the heap overflow described in CVE-2021-43527 when processing S/MIME messages. Thunderbird versions 91.3.0 and later will not call the vulnerable code when processing S/MIME messages that contain certificates with DER-encoded DSA or RSA-PSS signatures.",
+          "Severity": "CRITICAL",
+          "CVSS": {
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "V3Score": 9.8
+            }
+          },
+          "References": [
+            "https://access.redhat.com/security/cve/CVE-2021-43527",
+            "https://access.redhat.com/security/cve/CVE-2021-43529",
+            "https://access.redhat.com/security/vulnerabilities/RHSB-2021-008",
+            "https://bugzilla.mozilla.org/show_bug.cgi?id=1738501",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-43529",
+            "https://googleprojectzero.blogspot.com/2021/12/this-shouldnt-have-happened.html",
+            "https://www.mozilla.org/en-US/security/advisories/mfsa2021-51/",
+            "https://www.openwall.com/lists/oss-security/2021/12/01/6"
+          ]
+        },
+        {
           "VulnerabilityID": "CVE-2020-12401",
           "PkgName": "nss-util",
           "InstalledVersion": "3.67.0-7.el8_5",
           "Layer": {
-            "Digest": "sha256:77021c8c5a2c26b7370f701db23765e7059b1a663de3e38496a8a147c7b159cb",
-            "DiffID": "sha256:eebc402c78edcee75e73ea20095f6314595e0b728e2caf2920def8663c172a4f"
+            "Digest": "sha256:16a83da94125b9b04f5b8db90b38026292bba1e571413ba5a19fa435bb6190ab",
+            "DiffID": "sha256:7411c1b6233173b1ea484659ca16541c80bceb3da903f3a8e39173a79b010b88"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2020-12401",
@@ -3176,8 +2848,8 @@
           "PkgName": "nss-util",
           "InstalledVersion": "3.67.0-7.el8_5",
           "Layer": {
-            "Digest": "sha256:77021c8c5a2c26b7370f701db23765e7059b1a663de3e38496a8a147c7b159cb",
-            "DiffID": "sha256:eebc402c78edcee75e73ea20095f6314595e0b728e2caf2920def8663c172a4f"
+            "Digest": "sha256:16a83da94125b9b04f5b8db90b38026292bba1e571413ba5a19fa435bb6190ab",
+            "DiffID": "sha256:7411c1b6233173b1ea484659ca16541c80bceb3da903f3a8e39173a79b010b88"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2020-12413",
@@ -3197,140 +2869,227 @@
           ]
         },
         {
-          "VulnerabilityID": "CVE-2021-3712",
-          "PkgName": "openssl",
-          "InstalledVersion": "1:1.1.1k-6.el8_5",
+          "VulnerabilityID": "CVE-2022-29155",
+          "PkgName": "openldap",
+          "InstalledVersion": "2.4.46-18.el8",
           "Layer": {
-            "Digest": "sha256:77021c8c5a2c26b7370f701db23765e7059b1a663de3e38496a8a147c7b159cb",
-            "DiffID": "sha256:eebc402c78edcee75e73ea20095f6314595e0b728e2caf2920def8663c172a4f"
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
           },
           "SeveritySource": "redhat",
-          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-3712",
-          "Title": "openssl: Read buffer overruns processing ASN.1 strings",
-          "Description": "ASN.1 strings are represented internally within OpenSSL as an ASN1_STRING structure which contains a buffer holding the string data and a field holding the buffer length. This contrasts with normal C strings which are repesented as a buffer for the string data which is terminated with a NUL (0) byte. Although not a strict requirement, ASN.1 strings that are parsed using OpenSSL's own \"d2i\" functions (and other similar parsing functions) as well as any string whose value has been set with the ASN1_STRING_set() function will additionally NUL terminate the byte array in the ASN1_STRING structure. However, it is possible for applications to directly construct valid ASN1_STRING structures which do not NUL terminate the byte array by directly setting the \"data\" and \"length\" fields in the ASN1_STRING array. This can also happen by using the ASN1_STRING_set0() function. Numerous OpenSSL functions that print ASN.1 data have been found to assume that the ASN1_STRING byte array will be NUL terminated, even though this is not guaranteed for strings that have been directly constructed. Where an application requests an ASN.1 structure to be printed, and where that ASN.1 structure contains ASN1_STRINGs that have been directly constructed by the application without NUL terminating the \"data\" field, then a read buffer overrun can occur. The same thing can also occur during name constraints processing of certificates (for example if a certificate has been directly constructed by the application instead of loading it via the OpenSSL parsing functions, and the certificate contains non NUL terminated ASN1_STRING structures). It can also occur in the X509_get1_email(), X509_REQ_get1_email() and X509_get1_ocsp() functions. If a malicious actor can cause an application to directly construct an ASN1_STRING and then process it through one of the affected OpenSSL functions then this issue could be hit. This might result in a crash (causing a Denial of Service attack). It could also result in the disclosure of private memory contents (such as private keys, or sensitive plaintext). Fixed in OpenSSL 1.1.1l (Affected 1.1.1-1.1.1k). Fixed in OpenSSL 1.0.2za (Affected 1.0.2-1.0.2y).",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-29155",
+          "Title": "openldap: OpenLDAP SQL injection",
+          "Description": "In OpenLDAP 2.x before 2.5.12 and 2.6.x before 2.6.2, a SQL injection vulnerability exists in the experimental back-sql backend to slapd, via a SQL statement within an LDAP query. This can occur during an LDAP search operation when the search filter is processed, due to a lack of proper escaping.",
           "Severity": "MEDIUM",
           "CweIDs": [
-            "CWE-125"
+            "CWE-89"
           ],
           "CVSS": {
             "nvd": {
-              "V2Vector": "AV:N/AC:M/Au:N/C:P/I:N/A:P",
-              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:H",
-              "V2Score": 5.8,
-              "V3Score": 7.4
+              "V2Vector": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "V2Score": 7.5,
+              "V3Score": 9.8
             },
             "redhat": {
-              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:H",
-              "V3Score": 7.4
+              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L/A:N",
+              "V3Score": 6.5
             }
           },
           "References": [
-            "http://www.openwall.com/lists/oss-security/2021/08/26/2",
-            "https://access.redhat.com/hydra/rest/securitydata/cve/CVE-2021-3712.json",
-            "https://access.redhat.com/security/cve/CVE-2021-3712",
-            "https://cert-portal.siemens.com/productcert/pdf/ssa-244969.pdf",
-            "https://cert-portal.siemens.com/productcert/pdf/ssa-389290.pdf",
-            "https://crates.io/crates/openssl-src",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3712",
-            "https://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=94d23fcff9b2a7a8368dfe52214d5c2569882c11",
-            "https://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=ccb0a11145ee72b042d10593a64eaf9e8a55ec12",
-            "https://kc.mcafee.com/corporate/index?page=content\u0026id=SB10366",
-            "https://linux.oracle.com/cve/CVE-2021-3712.html",
-            "https://linux.oracle.com/errata/ELSA-2022-9023.html",
-            "https://lists.apache.org/thread.html/r18995de860f0e63635f3008fd2a6aca82394249476d21691e7c59c9e@%3Cdev.tomcat.apache.org%3E",
-            "https://lists.apache.org/thread.html/rad5d9f83f0d11fb3f8bb148d179b8a9ad7c6a17f18d70e5805a713d1@%3Cdev.tomcat.apache.org%3E",
-            "https://lists.debian.org/debian-lts-announce/2021/09/msg00014.html",
-            "https://lists.debian.org/debian-lts-announce/2021/09/msg00021.html",
-            "https://nvd.nist.gov/vuln/detail/CVE-2021-3712",
-            "https://rustsec.org/advisories/RUSTSEC-2021-0098.html",
-            "https://security.netapp.com/advisory/ntap-20210827-0010/",
-            "https://ubuntu.com/security/notices/USN-5051-1",
-            "https://ubuntu.com/security/notices/USN-5051-2",
-            "https://ubuntu.com/security/notices/USN-5051-3",
-            "https://ubuntu.com/security/notices/USN-5051-4 (regression only in trusty/esm)",
-            "https://ubuntu.com/security/notices/USN-5088-1",
-            "https://www.debian.org/security/2021/dsa-4963",
-            "https://www.openssl.org/news/secadv/20210824.txt",
-            "https://www.oracle.com/security-alerts/cpuapr2022.html",
-            "https://www.oracle.com/security-alerts/cpujan2022.html",
-            "https://www.oracle.com/security-alerts/cpuoct2021.html",
-            "https://www.tenable.com/security/tns-2021-16",
-            "https://www.tenable.com/security/tns-2022-02"
+            "https://access.redhat.com/security/cve/CVE-2022-29155",
+            "https://bugs.openldap.org/show_bug.cgi?id=9815",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-29155",
+            "https://lists.debian.org/debian-lts-announce/2022/05/msg00032.html",
+            "https://nvd.nist.gov/vuln/detail/CVE-2022-29155",
+            "https://ubuntu.com/security/notices/USN-5424-1",
+            "https://ubuntu.com/security/notices/USN-5424-2",
+            "https://www.debian.org/security/2022/dsa-5140"
           ],
-          "PublishedDate": "2021-08-24T15:15:00Z",
-          "LastModifiedDate": "2022-04-20T00:16:00Z"
+          "PublishedDate": "2022-05-04T20:15:00Z",
+          "LastModifiedDate": "2022-05-24T14:15:00Z"
         },
         {
-          "VulnerabilityID": "CVE-2021-3712",
+          "VulnerabilityID": "CVE-2022-1292",
           "PkgName": "openssl-libs",
           "InstalledVersion": "1:1.1.1k-6.el8_5",
           "Layer": {
-            "Digest": "sha256:77021c8c5a2c26b7370f701db23765e7059b1a663de3e38496a8a147c7b159cb",
-            "DiffID": "sha256:eebc402c78edcee75e73ea20095f6314595e0b728e2caf2920def8663c172a4f"
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
           },
           "SeveritySource": "redhat",
-          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-3712",
-          "Title": "openssl: Read buffer overruns processing ASN.1 strings",
-          "Description": "ASN.1 strings are represented internally within OpenSSL as an ASN1_STRING structure which contains a buffer holding the string data and a field holding the buffer length. This contrasts with normal C strings which are repesented as a buffer for the string data which is terminated with a NUL (0) byte. Although not a strict requirement, ASN.1 strings that are parsed using OpenSSL's own \"d2i\" functions (and other similar parsing functions) as well as any string whose value has been set with the ASN1_STRING_set() function will additionally NUL terminate the byte array in the ASN1_STRING structure. However, it is possible for applications to directly construct valid ASN1_STRING structures which do not NUL terminate the byte array by directly setting the \"data\" and \"length\" fields in the ASN1_STRING array. This can also happen by using the ASN1_STRING_set0() function. Numerous OpenSSL functions that print ASN.1 data have been found to assume that the ASN1_STRING byte array will be NUL terminated, even though this is not guaranteed for strings that have been directly constructed. Where an application requests an ASN.1 structure to be printed, and where that ASN.1 structure contains ASN1_STRINGs that have been directly constructed by the application without NUL terminating the \"data\" field, then a read buffer overrun can occur. The same thing can also occur during name constraints processing of certificates (for example if a certificate has been directly constructed by the application instead of loading it via the OpenSSL parsing functions, and the certificate contains non NUL terminated ASN1_STRING structures). It can also occur in the X509_get1_email(), X509_REQ_get1_email() and X509_get1_ocsp() functions. If a malicious actor can cause an application to directly construct an ASN1_STRING and then process it through one of the affected OpenSSL functions then this issue could be hit. This might result in a crash (causing a Denial of Service attack). It could also result in the disclosure of private memory contents (such as private keys, or sensitive plaintext). Fixed in OpenSSL 1.1.1l (Affected 1.1.1-1.1.1k). Fixed in OpenSSL 1.0.2za (Affected 1.0.2-1.0.2y).",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-1292",
+          "Title": "openssl: c_rehash script allows command injection",
+          "Description": "The c_rehash script does not properly sanitise shell metacharacters to prevent command injection. This script is distributed by some operating systems in a manner where it is automatically executed. On such operating systems, an attacker could execute arbitrary commands with the privileges of the script. Use of the c_rehash script is considered obsolete and should be replaced by the OpenSSL rehash command line tool. Fixed in OpenSSL 3.0.3 (Affected 3.0.0,3.0.1,3.0.2). Fixed in OpenSSL 1.1.1o (Affected 1.1.1-1.1.1n). Fixed in OpenSSL 1.0.2ze (Affected 1.0.2-1.0.2zd).",
+          "Severity": "MEDIUM",
+          "CweIDs": [
+            "CWE-78"
+          ],
+          "CVSS": {
+            "nvd": {
+              "V2Vector": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "V2Score": 10,
+              "V3Score": 9.8
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L",
+              "V3Score": 6.3
+            }
+          },
+          "References": [
+            "https://access.redhat.com/security/cve/CVE-2022-1292",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-1292",
+            "https://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=1ad73b4d27bd8c1b369a3cd453681d3a4f1bb9b2",
+            "https://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=548d3f280a6e737673f5b61fce24bb100108dfeb",
+            "https://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=e5fd1728ef4c7a5bf7c7a7163ca60370460a6e23",
+            "https://lists.debian.org/debian-lts-announce/2022/05/msg00019.html",
+            "https://mta.openssl.org/pipermail/openssl-announce/2022-May/000224.html",
+            "https://nvd.nist.gov/vuln/detail/CVE-2022-1292",
+            "https://ubuntu.com/security/notices/USN-5402-1",
+            "https://www.debian.org/security/2022/dsa-5139",
+            "https://www.openssl.org/news/secadv/20220503.txt"
+          ],
+          "PublishedDate": "2022-05-03T16:15:00Z",
+          "LastModifiedDate": "2022-05-18T15:15:00Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2022-1434",
+          "PkgName": "openssl-libs",
+          "InstalledVersion": "1:1.1.1k-6.el8_5",
+          "Layer": {
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
+          },
+          "SeveritySource": "redhat",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-1434",
+          "Title": "openssl: Incorrect MAC key used in the RC4-MD5 ciphersuite",
+          "Description": "The OpenSSL 3.0 implementation of the RC4-MD5 ciphersuite incorrectly uses the AAD data as the MAC key. This makes the MAC key trivially predictable. An attacker could exploit this issue by performing a man-in-the-middle attack to modify data being sent from one endpoint to an OpenSSL 3.0 recipient such that the modified data would still pass the MAC integrity check. Note that data sent from an OpenSSL 3.0 endpoint to a non-OpenSSL 3.0 endpoint will always be rejected by the recipient and the connection will fail at that point. Many application protocols require data to be sent from the client to the server first. Therefore, in such a case, only an OpenSSL 3.0 server would be impacted when talking to a non-OpenSSL 3.0 client. If both endpoints are OpenSSL 3.0 then the attacker could modify data being sent in both directions. In this case both clients and servers could be affected, regardless of the application protocol. Note that in the absence of an attacker this bug means that an OpenSSL 3.0 endpoint communicating with a non-OpenSSL 3.0 endpoint will fail to complete the handshake when using this ciphersuite. The confidentiality of data is not impacted by this issue, i.e. an attacker cannot decrypt data that has been encrypted using this ciphersuite - they can only modify it. In order for this attack to work both endpoints must legitimately negotiate the RC4-MD5 ciphersuite. This ciphersuite is not compiled by default in OpenSSL 3.0, and is not available within the default provider or the default ciphersuite list. This ciphersuite will never be used if TLSv1.3 has been negotiated. In order for an OpenSSL 3.0 endpoint to use this ciphersuite the following must have occurred: 1) OpenSSL must have been compiled with the (non-default) compile time option enable-weak-ssl-ciphers 2) OpenSSL must have had the legacy provider explicitly loaded (either through application code or via configuration) 3) The ciphersuite must have been explicitly added to the ciphersuite list 4) The libssl security level must have been set to 0 (default is 1) 5) A version of SSL/TLS below TLSv1.3 must have been negotiated 6) Both endpoints must negotiate the RC4-MD5 ciphersuite in preference to any others that both endpoints have in common Fixed in OpenSSL 3.0.3 (Affected 3.0.0,3.0.1,3.0.2).",
+          "Severity": "MEDIUM",
+          "CweIDs": [
+            "CWE-327"
+          ],
+          "CVSS": {
+            "nvd": {
+              "V2Vector": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:N",
+              "V2Score": 4.3,
+              "V3Score": 5.9
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:N",
+              "V3Score": 5.9
+            }
+          },
+          "References": [
+            "https://access.redhat.com/security/cve/CVE-2022-1434",
+            "https://crates.io/crates/openssl-src",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-1434",
+            "https://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=7d56a74a96828985db7354a55227a511615f732b",
+            "https://mta.openssl.org/pipermail/openssl-announce/2022-May/000224.html",
+            "https://rustsec.org/advisories/RUSTSEC-2022-0026.html",
+            "https://ubuntu.com/security/notices/USN-5402-1",
+            "https://www.openssl.org/news/secadv/20220503.txt"
+          ],
+          "PublishedDate": "2022-05-03T16:15:00Z",
+          "LastModifiedDate": "2022-05-12T13:57:00Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2022-1586",
+          "PkgName": "pcre2",
+          "InstalledVersion": "10.32-2.el8",
+          "Layer": {
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
+          },
+          "SeveritySource": "redhat",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-1586",
+          "Title": "pcre2: Out-of-bounds read in compile_xclass_matchingpath in pcre2_jit_compile.c",
+          "Description": "An out-of-bounds read vulnerability was discovered in the PCRE2 library in the compile_xclass_matchingpath() function of the pcre2_jit_compile.c file. This involves a unicode property matching issue in JIT-compiled regular expressions. The issue occurs because the character was not fully read in case-less matching within JIT.",
           "Severity": "MEDIUM",
           "CweIDs": [
             "CWE-125"
           ],
           "CVSS": {
             "nvd": {
-              "V2Vector": "AV:N/AC:M/Au:N/C:P/I:N/A:P",
-              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:H",
-              "V2Score": 5.8,
-              "V3Score": 7.4
+              "V2Vector": "AV:N/AC:L/Au:N/C:P/I:N/A:P",
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H",
+              "V2Score": 6.4,
+              "V3Score": 9.1
             },
             "redhat": {
-              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:H",
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:H",
+              "V3Score": 7.1
+            }
+          },
+          "References": [
+            "https://access.redhat.com/security/cve/CVE-2022-1586",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=2077976,",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-1586",
+            "https://github.com/PCRE2Project/pcre2/commit/50a51cb7e67268e6ad417eb07c9de9bfea5cc55a,",
+            "https://github.com/PCRE2Project/pcre2/commit/d4fa336fbcc388f89095b184ba6d99422cfc676c",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/KAX7767BCUFC7JMDGP7GOQ5GIZCAUGBB/",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/M2GLQQUEY5VFM57CFYXVIFOXN2HUZPDM/",
+            "https://nvd.nist.gov/vuln/detail/CVE-2022-1586"
+          ],
+          "PublishedDate": "2022-05-16T21:15:00Z",
+          "LastModifiedDate": "2022-05-26T03:15:00Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2022-29824",
+          "PkgName": "python3-libxml2",
+          "InstalledVersion": "2.9.7-13.el8",
+          "Layer": {
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
+          },
+          "SeveritySource": "redhat",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-29824",
+          "Title": "libxml2: integer overflows in xmlBuf and xmlBuffer lead to out-of-bounds write",
+          "Description": "In libxml2 before 2.9.14, several buffer handling functions in buf.c (xmlBuf*) and tree.c (xmlBuffer*) don't check for integer overflows. This can result in out-of-bounds memory writes. Exploitation requires a victim to open a crafted, multi-gigabyte XML file. Other software using libxml2's buffer functions, for example libxslt through 1.1.35, is affected as well.",
+          "Severity": "MEDIUM",
+          "CweIDs": [
+            "CWE-190"
+          ],
+          "CVSS": {
+            "nvd": {
+              "V2Vector": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "V2Score": 4.3,
+              "V3Score": 6.5
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:H",
               "V3Score": 7.4
             }
           },
           "References": [
-            "http://www.openwall.com/lists/oss-security/2021/08/26/2",
-            "https://access.redhat.com/hydra/rest/securitydata/cve/CVE-2021-3712.json",
-            "https://access.redhat.com/security/cve/CVE-2021-3712",
-            "https://cert-portal.siemens.com/productcert/pdf/ssa-244969.pdf",
-            "https://cert-portal.siemens.com/productcert/pdf/ssa-389290.pdf",
-            "https://crates.io/crates/openssl-src",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3712",
-            "https://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=94d23fcff9b2a7a8368dfe52214d5c2569882c11",
-            "https://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=ccb0a11145ee72b042d10593a64eaf9e8a55ec12",
-            "https://kc.mcafee.com/corporate/index?page=content\u0026id=SB10366",
-            "https://linux.oracle.com/cve/CVE-2021-3712.html",
-            "https://linux.oracle.com/errata/ELSA-2022-9023.html",
-            "https://lists.apache.org/thread.html/r18995de860f0e63635f3008fd2a6aca82394249476d21691e7c59c9e@%3Cdev.tomcat.apache.org%3E",
-            "https://lists.apache.org/thread.html/rad5d9f83f0d11fb3f8bb148d179b8a9ad7c6a17f18d70e5805a713d1@%3Cdev.tomcat.apache.org%3E",
-            "https://lists.debian.org/debian-lts-announce/2021/09/msg00014.html",
-            "https://lists.debian.org/debian-lts-announce/2021/09/msg00021.html",
-            "https://nvd.nist.gov/vuln/detail/CVE-2021-3712",
-            "https://rustsec.org/advisories/RUSTSEC-2021-0098.html",
-            "https://security.netapp.com/advisory/ntap-20210827-0010/",
-            "https://ubuntu.com/security/notices/USN-5051-1",
-            "https://ubuntu.com/security/notices/USN-5051-2",
-            "https://ubuntu.com/security/notices/USN-5051-3",
-            "https://ubuntu.com/security/notices/USN-5051-4 (regression only in trusty/esm)",
-            "https://ubuntu.com/security/notices/USN-5088-1",
-            "https://www.debian.org/security/2021/dsa-4963",
-            "https://www.openssl.org/news/secadv/20210824.txt",
-            "https://www.oracle.com/security-alerts/cpuapr2022.html",
-            "https://www.oracle.com/security-alerts/cpujan2022.html",
-            "https://www.oracle.com/security-alerts/cpuoct2021.html",
-            "https://www.tenable.com/security/tns-2021-16",
-            "https://www.tenable.com/security/tns-2022-02"
+            "https://access.redhat.com/security/cve/CVE-2022-29824",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-29824",
+            "https://gitlab.gnome.org/GNOME/libxml2/-/commit/2554a2408e09f13652049e5ffb0d26196b02ebab",
+            "https://gitlab.gnome.org/GNOME/libxml2/-/commit/2554a2408e09f13652049e5ffb0d26196b02ebab (v2.9.14)",
+            "https://gitlab.gnome.org/GNOME/libxml2/-/commit/6c283d83eccd940bcde15634ac8c7f100e3caefd",
+            "https://gitlab.gnome.org/GNOME/libxml2/-/commit/6c283d83eccd940bcde15634ac8c7f100e3caefd (master)",
+            "https://gitlab.gnome.org/GNOME/libxml2/-/tags/v2.9.14",
+            "https://gitlab.gnome.org/GNOME/libxslt/-/tags",
+            "https://lists.debian.org/debian-lts-announce/2022/05/msg00023.html",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/FZOBT5Y6Y2QLDDX2HZGMV7MJMWGXORKK/",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/P3NVZVWFRBXBI3AKZZWUWY6INQQPQVSF/",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/P5363EDV5VHZ5C77ODA43RYDCPMA7ARM/",
+            "https://nvd.nist.gov/vuln/detail/CVE-2022-29824",
+            "https://ubuntu.com/security/notices/USN-5422-1",
+            "https://www.debian.org/security/2022/dsa-5142"
           ],
-          "PublishedDate": "2021-08-24T15:15:00Z",
-          "LastModifiedDate": "2022-04-20T00:16:00Z"
+          "PublishedDate": "2022-05-03T03:15:00Z",
+          "LastModifiedDate": "2022-05-23T11:16:00Z"
         },
         {
           "VulnerabilityID": "CVE-2018-20225",
           "PkgName": "python3-pip-wheel",
-          "InstalledVersion": "9.0.3-20.el8",
+          "InstalledVersion": "9.0.3-22.el8",
           "Layer": {
-            "Digest": "sha256:ac56bdc7f9934acede05653e9e01e73e961c31818b522c0732ad35350bb3a82b",
-            "DiffID": "sha256:0d3f22d60daf4a2421b2239fb0e1c6ec02d3787274db8b098fb648941ea2d5dc"
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2018-20225",
@@ -3366,10 +3125,10 @@
         {
           "VulnerabilityID": "CVE-2021-35937",
           "PkgName": "python3-rpm",
-          "InstalledVersion": "4.14.3-19.el8_5.2",
+          "InstalledVersion": "4.14.3-23.el8",
           "Layer": {
-            "Digest": "sha256:77021c8c5a2c26b7370f701db23765e7059b1a663de3e38496a8a147c7b159cb",
-            "DiffID": "sha256:eebc402c78edcee75e73ea20095f6314595e0b728e2caf2920def8663c172a4f"
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-35937",
@@ -3389,10 +3148,10 @@
         {
           "VulnerabilityID": "CVE-2021-35938",
           "PkgName": "python3-rpm",
-          "InstalledVersion": "4.14.3-19.el8_5.2",
+          "InstalledVersion": "4.14.3-23.el8",
           "Layer": {
-            "Digest": "sha256:77021c8c5a2c26b7370f701db23765e7059b1a663de3e38496a8a147c7b159cb",
-            "DiffID": "sha256:eebc402c78edcee75e73ea20095f6314595e0b728e2caf2920def8663c172a4f"
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-35938",
@@ -3412,10 +3171,10 @@
         {
           "VulnerabilityID": "CVE-2021-35939",
           "PkgName": "python3-rpm",
-          "InstalledVersion": "4.14.3-19.el8_5.2",
+          "InstalledVersion": "4.14.3-23.el8",
           "Layer": {
-            "Digest": "sha256:77021c8c5a2c26b7370f701db23765e7059b1a663de3e38496a8a147c7b159cb",
-            "DiffID": "sha256:eebc402c78edcee75e73ea20095f6314595e0b728e2caf2920def8663c172a4f"
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-35939",
@@ -3435,10 +3194,10 @@
         {
           "VulnerabilityID": "CVE-2021-35937",
           "PkgName": "rpm",
-          "InstalledVersion": "4.14.3-19.el8_5.2",
+          "InstalledVersion": "4.14.3-23.el8",
           "Layer": {
-            "Digest": "sha256:77021c8c5a2c26b7370f701db23765e7059b1a663de3e38496a8a147c7b159cb",
-            "DiffID": "sha256:eebc402c78edcee75e73ea20095f6314595e0b728e2caf2920def8663c172a4f"
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-35937",
@@ -3458,10 +3217,10 @@
         {
           "VulnerabilityID": "CVE-2021-35938",
           "PkgName": "rpm",
-          "InstalledVersion": "4.14.3-19.el8_5.2",
+          "InstalledVersion": "4.14.3-23.el8",
           "Layer": {
-            "Digest": "sha256:77021c8c5a2c26b7370f701db23765e7059b1a663de3e38496a8a147c7b159cb",
-            "DiffID": "sha256:eebc402c78edcee75e73ea20095f6314595e0b728e2caf2920def8663c172a4f"
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-35938",
@@ -3481,10 +3240,10 @@
         {
           "VulnerabilityID": "CVE-2021-35939",
           "PkgName": "rpm",
-          "InstalledVersion": "4.14.3-19.el8_5.2",
+          "InstalledVersion": "4.14.3-23.el8",
           "Layer": {
-            "Digest": "sha256:77021c8c5a2c26b7370f701db23765e7059b1a663de3e38496a8a147c7b159cb",
-            "DiffID": "sha256:eebc402c78edcee75e73ea20095f6314595e0b728e2caf2920def8663c172a4f"
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-35939",
@@ -3504,10 +3263,10 @@
         {
           "VulnerabilityID": "CVE-2021-35937",
           "PkgName": "rpm-build-libs",
-          "InstalledVersion": "4.14.3-19.el8_5.2",
+          "InstalledVersion": "4.14.3-23.el8",
           "Layer": {
-            "Digest": "sha256:77021c8c5a2c26b7370f701db23765e7059b1a663de3e38496a8a147c7b159cb",
-            "DiffID": "sha256:eebc402c78edcee75e73ea20095f6314595e0b728e2caf2920def8663c172a4f"
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-35937",
@@ -3527,10 +3286,10 @@
         {
           "VulnerabilityID": "CVE-2021-35938",
           "PkgName": "rpm-build-libs",
-          "InstalledVersion": "4.14.3-19.el8_5.2",
+          "InstalledVersion": "4.14.3-23.el8",
           "Layer": {
-            "Digest": "sha256:77021c8c5a2c26b7370f701db23765e7059b1a663de3e38496a8a147c7b159cb",
-            "DiffID": "sha256:eebc402c78edcee75e73ea20095f6314595e0b728e2caf2920def8663c172a4f"
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-35938",
@@ -3550,10 +3309,10 @@
         {
           "VulnerabilityID": "CVE-2021-35939",
           "PkgName": "rpm-build-libs",
-          "InstalledVersion": "4.14.3-19.el8_5.2",
+          "InstalledVersion": "4.14.3-23.el8",
           "Layer": {
-            "Digest": "sha256:77021c8c5a2c26b7370f701db23765e7059b1a663de3e38496a8a147c7b159cb",
-            "DiffID": "sha256:eebc402c78edcee75e73ea20095f6314595e0b728e2caf2920def8663c172a4f"
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-35939",
@@ -3573,10 +3332,10 @@
         {
           "VulnerabilityID": "CVE-2021-35937",
           "PkgName": "rpm-libs",
-          "InstalledVersion": "4.14.3-19.el8_5.2",
+          "InstalledVersion": "4.14.3-23.el8",
           "Layer": {
-            "Digest": "sha256:77021c8c5a2c26b7370f701db23765e7059b1a663de3e38496a8a147c7b159cb",
-            "DiffID": "sha256:eebc402c78edcee75e73ea20095f6314595e0b728e2caf2920def8663c172a4f"
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-35937",
@@ -3596,10 +3355,10 @@
         {
           "VulnerabilityID": "CVE-2021-35938",
           "PkgName": "rpm-libs",
-          "InstalledVersion": "4.14.3-19.el8_5.2",
+          "InstalledVersion": "4.14.3-23.el8",
           "Layer": {
-            "Digest": "sha256:77021c8c5a2c26b7370f701db23765e7059b1a663de3e38496a8a147c7b159cb",
-            "DiffID": "sha256:eebc402c78edcee75e73ea20095f6314595e0b728e2caf2920def8663c172a4f"
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-35938",
@@ -3619,10 +3378,10 @@
         {
           "VulnerabilityID": "CVE-2021-35939",
           "PkgName": "rpm-libs",
-          "InstalledVersion": "4.14.3-19.el8_5.2",
+          "InstalledVersion": "4.14.3-23.el8",
           "Layer": {
-            "Digest": "sha256:77021c8c5a2c26b7370f701db23765e7059b1a663de3e38496a8a147c7b159cb",
-            "DiffID": "sha256:eebc402c78edcee75e73ea20095f6314595e0b728e2caf2920def8663c172a4f"
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-35939",
@@ -3644,8 +3403,8 @@
           "PkgName": "sqlite-libs",
           "InstalledVersion": "3.26.0-15.el8",
           "Layer": {
-            "Digest": "sha256:ac56bdc7f9934acede05653e9e01e73e961c31818b522c0732ad35350bb3a82b",
-            "DiffID": "sha256:0d3f22d60daf4a2421b2239fb0e1c6ec02d3787274db8b098fb648941ea2d5dc"
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2019-19244",
@@ -3681,8 +3440,8 @@
           "PkgName": "sqlite-libs",
           "InstalledVersion": "3.26.0-15.el8",
           "Layer": {
-            "Digest": "sha256:ac56bdc7f9934acede05653e9e01e73e961c31818b522c0732ad35350bb3a82b",
-            "DiffID": "sha256:0d3f22d60daf4a2421b2239fb0e1c6ec02d3787274db8b098fb648941ea2d5dc"
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2019-9936",
@@ -3730,8 +3489,8 @@
           "PkgName": "sqlite-libs",
           "InstalledVersion": "3.26.0-15.el8",
           "Layer": {
-            "Digest": "sha256:ac56bdc7f9934acede05653e9e01e73e961c31818b522c0732ad35350bb3a82b",
-            "DiffID": "sha256:0d3f22d60daf4a2421b2239fb0e1c6ec02d3787274db8b098fb648941ea2d5dc"
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2019-9937",
@@ -3775,49 +3534,12 @@
           "LastModifiedDate": "2020-08-23T01:15:00Z"
         },
         {
-          "VulnerabilityID": "CVE-2021-45346",
-          "PkgName": "sqlite-libs",
-          "InstalledVersion": "3.26.0-15.el8",
-          "Layer": {
-            "Digest": "sha256:ac56bdc7f9934acede05653e9e01e73e961c31818b522c0732ad35350bb3a82b",
-            "DiffID": "sha256:0d3f22d60daf4a2421b2239fb0e1c6ec02d3787274db8b098fb648941ea2d5dc"
-          },
-          "SeveritySource": "redhat",
-          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-45346",
-          "Title": "sqlite: crafted SQL query allows a malicious user to obtain sensitive information",
-          "Description": "A Memory Leak vulnerabilty exists in SQLite Project SQLite3 3.35.1 and 3.37.0 via maliciously crafted SQL Queries (made via editing the Database File), it is possible to query a record, and leak subsequent bytes of memory that extend beyond the record, which could let a malicous user obtain sensitive information..",
-          "Severity": "LOW",
-          "CweIDs": [
-            "CWE-401"
-          ],
-          "CVSS": {
-            "nvd": {
-              "V2Vector": "AV:N/AC:L/Au:S/C:P/I:N/A:N",
-              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
-              "V2Score": 4,
-              "V3Score": 6.5
-            },
-            "redhat": {
-              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:N/A:N",
-              "V3Score": 3.1
-            }
-          },
-          "References": [
-            "https://access.redhat.com/security/cve/CVE-2021-45346",
-            "https://github.com/guyinatuxedo/sqlite3_record_leaking",
-            "https://security.netapp.com/advisory/ntap-20220303-0001/",
-            "https://sqlite.org/forum/forumpost/53de8864ba114bf6"
-          ],
-          "PublishedDate": "2022-02-14T19:15:00Z",
-          "LastModifiedDate": "2022-03-24T16:15:00Z"
-        },
-        {
           "VulnerabilityID": "CVE-2018-20839",
           "PkgName": "systemd",
-          "InstalledVersion": "239-51.el8_5.5",
+          "InstalledVersion": "239-58.el8",
           "Layer": {
-            "Digest": "sha256:77021c8c5a2c26b7370f701db23765e7059b1a663de3e38496a8a147c7b159cb",
-            "DiffID": "sha256:eebc402c78edcee75e73ea20095f6314595e0b728e2caf2920def8663c172a4f"
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2018-20839",
@@ -3854,10 +3576,10 @@
         {
           "VulnerabilityID": "CVE-2021-3997",
           "PkgName": "systemd",
-          "InstalledVersion": "239-51.el8_5.5",
+          "InstalledVersion": "239-58.el8",
           "Layer": {
-            "Digest": "sha256:77021c8c5a2c26b7370f701db23765e7059b1a663de3e38496a8a147c7b159cb",
-            "DiffID": "sha256:eebc402c78edcee75e73ea20095f6314595e0b728e2caf2920def8663c172a4f"
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-3997",
@@ -3880,10 +3602,10 @@
         {
           "VulnerabilityID": "CVE-2018-20839",
           "PkgName": "systemd-libs",
-          "InstalledVersion": "239-51.el8_5.5",
+          "InstalledVersion": "239-58.el8",
           "Layer": {
-            "Digest": "sha256:77021c8c5a2c26b7370f701db23765e7059b1a663de3e38496a8a147c7b159cb",
-            "DiffID": "sha256:eebc402c78edcee75e73ea20095f6314595e0b728e2caf2920def8663c172a4f"
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2018-20839",
@@ -3920,10 +3642,10 @@
         {
           "VulnerabilityID": "CVE-2021-3997",
           "PkgName": "systemd-libs",
-          "InstalledVersion": "239-51.el8_5.5",
+          "InstalledVersion": "239-58.el8",
           "Layer": {
-            "Digest": "sha256:77021c8c5a2c26b7370f701db23765e7059b1a663de3e38496a8a147c7b159cb",
-            "DiffID": "sha256:eebc402c78edcee75e73ea20095f6314595e0b728e2caf2920def8663c172a4f"
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-3997",
@@ -3946,10 +3668,10 @@
         {
           "VulnerabilityID": "CVE-2018-20839",
           "PkgName": "systemd-pam",
-          "InstalledVersion": "239-51.el8_5.5",
+          "InstalledVersion": "239-58.el8",
           "Layer": {
-            "Digest": "sha256:77021c8c5a2c26b7370f701db23765e7059b1a663de3e38496a8a147c7b159cb",
-            "DiffID": "sha256:eebc402c78edcee75e73ea20095f6314595e0b728e2caf2920def8663c172a4f"
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2018-20839",
@@ -3986,10 +3708,10 @@
         {
           "VulnerabilityID": "CVE-2021-3997",
           "PkgName": "systemd-pam",
-          "InstalledVersion": "239-51.el8_5.5",
+          "InstalledVersion": "239-58.el8",
           "Layer": {
-            "Digest": "sha256:77021c8c5a2c26b7370f701db23765e7059b1a663de3e38496a8a147c7b159cb",
-            "DiffID": "sha256:eebc402c78edcee75e73ea20095f6314595e0b728e2caf2920def8663c172a4f"
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-3997",
@@ -4014,8 +3736,8 @@
           "PkgName": "tar",
           "InstalledVersion": "2:1.30-5.el8",
           "Layer": {
-            "Digest": "sha256:ac56bdc7f9934acede05653e9e01e73e961c31818b522c0732ad35350bb3a82b",
-            "DiffID": "sha256:0d3f22d60daf4a2421b2239fb0e1c6ec02d3787274db8b098fb648941ea2d5dc"
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2005-2541",
@@ -4045,8 +3767,8 @@
           "PkgName": "tar",
           "InstalledVersion": "2:1.30-5.el8",
           "Layer": {
-            "Digest": "sha256:ac56bdc7f9934acede05653e9e01e73e961c31818b522c0732ad35350bb3a82b",
-            "DiffID": "sha256:0d3f22d60daf4a2421b2239fb0e1c6ec02d3787274db8b098fb648941ea2d5dc"
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2019-9923",
@@ -4087,8 +3809,8 @@
           "PkgName": "tar",
           "InstalledVersion": "2:1.30-5.el8",
           "Layer": {
-            "Digest": "sha256:ac56bdc7f9934acede05653e9e01e73e961c31818b522c0732ad35350bb3a82b",
-            "DiffID": "sha256:0d3f22d60daf4a2421b2239fb0e1c6ec02d3787274db8b098fb648941ea2d5dc"
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-20193",
@@ -4126,12 +3848,133 @@
           "LastModifiedDate": "2021-06-03T18:53:00Z"
         },
         {
+          "VulnerabilityID": "CVE-2022-1619",
+          "PkgName": "vim-minimal",
+          "InstalledVersion": "2:8.0.1763-16.el8_5.13",
+          "Layer": {
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
+          },
+          "SeveritySource": "redhat",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-1619",
+          "Title": "vim: heap-buffer-overflow in cmdline_erase_chars of ex_getln.c",
+          "Description": "Heap-based Buffer Overflow in function cmdline_erase_chars in GitHub repository vim/vim prior to 8.2.4899. This vulnerabilities are capable of crashing software, modify memory, and possible remote execution",
+          "Severity": "MEDIUM",
+          "CweIDs": [
+            "CWE-787"
+          ],
+          "CVSS": {
+            "nvd": {
+              "V2Vector": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "V2Score": 6.8,
+              "V3Score": 7.8
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:L",
+              "V3Score": 4.4
+            }
+          },
+          "References": [
+            "https://access.redhat.com/security/cve/CVE-2022-1619",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-1619",
+            "https://github.com/vim/vim/commit/ef02f16609ff0a26ffc6e20263523424980898fe",
+            "https://huntr.dev/bounties/b3200483-624e-4c76-a070-e246f62a7450",
+            "https://lists.debian.org/debian-lts-announce/2022/05/msg00022.html",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/A6BY5P7ERZS7KXSBCGFCOXLMLGWUUJIH/",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/HIP7KG7TVS5YF3QREAY2GOGUT3YUBZAI/",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/JUN33257RUM4RS2I4GZETKFSAXPETATG/",
+            "https://nvd.nist.gov/vuln/detail/CVE-2022-1619"
+          ],
+          "PublishedDate": "2022-05-08T10:15:00Z",
+          "LastModifiedDate": "2022-05-18T11:15:00Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2022-1621",
+          "PkgName": "vim-minimal",
+          "InstalledVersion": "2:8.0.1763-16.el8_5.13",
+          "Layer": {
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
+          },
+          "SeveritySource": "redhat",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-1621",
+          "Title": "vim: heap buffer overflow",
+          "Description": "Heap buffer overflow in vim_strncpy find_word in GitHub repository vim/vim prior to 8.2.4919. This vulnerability is capable of crashing software, Bypass Protection Mechanism, Modify Memory, and possible remote execution",
+          "Severity": "MEDIUM",
+          "CweIDs": [
+            "CWE-787"
+          ],
+          "CVSS": {
+            "nvd": {
+              "V2Vector": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "V2Score": 6.8,
+              "V3Score": 7.8
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:L/I:H/A:H",
+              "V3Score": 7.3
+            }
+          },
+          "References": [
+            "https://access.redhat.com/security/cve/CVE-2022-1621",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-1621",
+            "https://github.com/vim/vim/commit/7c824682d2028432ee082703ef0ab399867a089b",
+            "https://github.com/vim/vim/commit/7c824682d2028432ee082703ef0ab399867a089b (v8.2.4919)",
+            "https://huntr.dev/bounties/520ce714-bfd2-4646-9458-f52cd22bb2fb",
+            "https://lists.debian.org/debian-lts-announce/2022/05/msg00022.html",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/HIP7KG7TVS5YF3QREAY2GOGUT3YUBZAI/",
+            "https://nvd.nist.gov/vuln/detail/CVE-2022-1621"
+          ],
+          "PublishedDate": "2022-05-10T14:15:00Z",
+          "LastModifiedDate": "2022-05-18T11:15:00Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2022-1629",
+          "PkgName": "vim-minimal",
+          "InstalledVersion": "2:8.0.1763-16.el8_5.13",
+          "Layer": {
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
+          },
+          "SeveritySource": "redhat",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-1629",
+          "Title": "vim: buffer over-read",
+          "Description": "Buffer Over-read in function find_next_quote in GitHub repository vim/vim prior to 8.2.4925. This vulnerabilities are capable of crashing software, Modify Memory, and possible remote execution",
+          "Severity": "MEDIUM",
+          "CweIDs": [
+            "CWE-125"
+          ],
+          "CVSS": {
+            "nvd": {
+              "V2Vector": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "V2Score": 6.8,
+              "V3Score": 7.8
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:H",
+              "V3Score": 6.6
+            }
+          },
+          "References": [
+            "https://access.redhat.com/security/cve/CVE-2022-1629",
+            "https://github.com/vim/vim/commit/53a70289c2712808e6d4e88927e03cac01b470dd",
+            "https://huntr.dev/bounties/e26d08d4-1886-41f0-9af4-f3e1bf3d52ee",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/HIP7KG7TVS5YF3QREAY2GOGUT3YUBZAI/",
+            "https://nvd.nist.gov/vuln/detail/CVE-2022-1629"
+          ],
+          "PublishedDate": "2022-05-10T14:15:00Z",
+          "LastModifiedDate": "2022-05-18T11:15:00Z"
+        },
+        {
           "VulnerabilityID": "CVE-2018-20786",
           "PkgName": "vim-minimal",
           "InstalledVersion": "2:8.0.1763-16.el8_5.13",
           "Layer": {
-            "Digest": "sha256:77021c8c5a2c26b7370f701db23765e7059b1a663de3e38496a8a147c7b159cb",
-            "DiffID": "sha256:eebc402c78edcee75e73ea20095f6314595e0b728e2caf2920def8663c172a4f"
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2018-20786",
@@ -4169,8 +4012,8 @@
           "PkgName": "vim-minimal",
           "InstalledVersion": "2:8.0.1763-16.el8_5.13",
           "Layer": {
-            "Digest": "sha256:77021c8c5a2c26b7370f701db23765e7059b1a663de3e38496a8a147c7b159cb",
-            "DiffID": "sha256:eebc402c78edcee75e73ea20095f6314595e0b728e2caf2920def8663c172a4f"
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-3927",
@@ -4213,8 +4056,8 @@
           "PkgName": "vim-minimal",
           "InstalledVersion": "2:8.0.1763-16.el8_5.13",
           "Layer": {
-            "Digest": "sha256:77021c8c5a2c26b7370f701db23765e7059b1a663de3e38496a8a147c7b159cb",
-            "DiffID": "sha256:eebc402c78edcee75e73ea20095f6314595e0b728e2caf2920def8663c172a4f"
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-3974",
@@ -4248,7 +4091,8 @@
             "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/FNXY7T5OORA7UJIMGSJBGHFMU6UZWS6P/",
             "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/IH2LS2DXBTYOCWGAKFMBF3HTWWXPBEFL/",
             "https://nvd.nist.gov/vuln/detail/CVE-2021-3974",
-            "https://ubuntu.com/security/notices/USN-5247-1"
+            "https://ubuntu.com/security/notices/USN-5247-1",
+            "https://ubuntu.com/security/notices/USN-5433-1"
           ],
           "PublishedDate": "2021-11-19T11:15:00Z",
           "LastModifiedDate": "2022-03-29T21:17:00Z"
@@ -4258,8 +4102,8 @@
           "PkgName": "vim-minimal",
           "InstalledVersion": "2:8.0.1763-16.el8_5.13",
           "Layer": {
-            "Digest": "sha256:77021c8c5a2c26b7370f701db23765e7059b1a663de3e38496a8a147c7b159cb",
-            "DiffID": "sha256:eebc402c78edcee75e73ea20095f6314595e0b728e2caf2920def8663c172a4f"
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-4166",
@@ -4284,6 +4128,7 @@
           },
           "References": [
             "http://seclists.org/fulldisclosure/2022/Mar/29",
+            "http://seclists.org/fulldisclosure/2022/May/35",
             "http://www.openwall.com/lists/oss-security/2022/01/15/1",
             "https://access.redhat.com/security/cve/CVE-2021-4166",
             "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-4166",
@@ -4293,18 +4138,19 @@
             "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/2EY2VFBU3YGGWI5BW4XKT3F37MYGEQUD/",
             "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/3FH2J57GDA2WMBS6J56F6QQRA6BXQQFZ/",
             "https://nvd.nist.gov/vuln/detail/CVE-2021-4166",
-            "https://support.apple.com/kb/HT213183"
+            "https://support.apple.com/kb/HT213183",
+            "https://support.apple.com/kb/HT213256"
           ],
           "PublishedDate": "2021-12-25T19:15:00Z",
-          "LastModifiedDate": "2022-03-29T20:53:00Z"
+          "LastModifiedDate": "2022-05-17T07:15:00Z"
         },
         {
           "VulnerabilityID": "CVE-2022-0351",
           "PkgName": "vim-minimal",
           "InstalledVersion": "2:8.0.1763-16.el8_5.13",
           "Layer": {
-            "Digest": "sha256:77021c8c5a2c26b7370f701db23765e7059b1a663de3e38496a8a147c7b159cb",
-            "DiffID": "sha256:eebc402c78edcee75e73ea20095f6314595e0b728e2caf2920def8663c172a4f"
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
           },
           "SeveritySource": "redhat",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-0351",
@@ -4331,219 +4177,149 @@
             "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-0351",
             "https://github.com/vim/vim/commit/fe6fb267e6ee5c5da2f41889e4e0e0ac5bf4b89d",
             "https://github.com/vim/vim/commit/fe6fb267e6ee5c5da2f41889e4e0e0ac5bf4b89d (v8.2.4206)",
-            "https://huntr.dev/bounties/8b36db58-b65c-4298-be7f-40b9e37fd161"
+            "https://huntr.dev/bounties/8b36db58-b65c-4298-be7f-40b9e37fd161",
+            "https://lists.debian.org/debian-lts-announce/2022/05/msg00022.html"
           ],
           "PublishedDate": "2022-01-25T18:15:00Z",
-          "LastModifiedDate": "2022-01-31T20:13:00Z"
+          "LastModifiedDate": "2022-05-16T22:15:00Z"
         },
         {
-          "VulnerabilityID": "CVE-2018-25032",
-          "VendorIDs": [
-            "RHSA-2022:1642"
-          ],
-          "PkgName": "zlib",
-          "InstalledVersion": "1.2.11-17.el8",
-          "FixedVersion": "1.2.11-18.el8_5",
+          "VulnerabilityID": "CVE-2022-1733",
+          "PkgName": "vim-minimal",
+          "InstalledVersion": "2:8.0.1763-16.el8_5.13",
           "Layer": {
-            "Digest": "sha256:ac56bdc7f9934acede05653e9e01e73e961c31818b522c0732ad35350bb3a82b",
-            "DiffID": "sha256:0d3f22d60daf4a2421b2239fb0e1c6ec02d3787274db8b098fb648941ea2d5dc"
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
           },
           "SeveritySource": "redhat",
-          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2018-25032",
-          "Title": "zlib: A flaw found in zlib when compressing (not decompressing) certain inputs",
-          "Description": "zlib before 1.2.12 allows memory corruption when deflating (i.e., when compressing) if the input has many distant matches.",
-          "Severity": "HIGH",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-1733",
+          "Title": "vim: Heap-based Buffer Overflow in cindent.c",
+          "Description": "Heap-based Buffer Overflow in GitHub repository vim/vim prior to 8.2.4968.",
+          "Severity": "LOW",
           "CweIDs": [
             "CWE-787"
           ],
           "CVSS": {
             "nvd": {
-              "V2Vector": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
-              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-              "V2Score": 5,
-              "V3Score": 7.5
+              "V2Vector": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "V2Score": 4.6,
+              "V3Score": 7.8
             },
             "redhat": {
-              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:H",
-              "V3Score": 8.2
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 5.5
             }
           },
           "References": [
-            "http://www.openwall.com/lists/oss-security/2022/03/25/2",
-            "http://www.openwall.com/lists/oss-security/2022/03/26/1",
-            "https://access.redhat.com/security/cve/CVE-2018-25032",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-25032",
-            "https://github.com/madler/zlib/commit/5c44459c3b28a9bd3283aaceab7c615f8020c531",
-            "https://github.com/madler/zlib/compare/v1.2.11...v1.2.12",
-            "https://github.com/madler/zlib/issues/605",
-            "https://github.com/sparklemotion/nokogiri/releases/tag/v1.13.4",
-            "https://github.com/sparklemotion/nokogiri/security/advisories/GHSA-v6gp-9mmm-c6p5",
-            "https://groups.google.com/g/ruby-security-ann/c/vX7qSjsvWis/m/TJWN4oOKBwAJ",
-            "https://linux.oracle.com/cve/CVE-2018-25032.html",
-            "https://linux.oracle.com/errata/ELSA-2022-1642.html",
-            "https://lists.debian.org/debian-lts-announce/2022/04/msg00000.html",
-            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/NS2D2GFPFGOJUL4WQ3DUAY7HF4VWQ77F/",
-            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/XOKFMSNQ5D5WGMALBNBXU3GE442V74WU/",
-            "https://nvd.nist.gov/vuln/detail/CVE-2018-25032",
-            "https://ubuntu.com/security/notices/USN-5355-1",
-            "https://ubuntu.com/security/notices/USN-5355-2",
-            "https://ubuntu.com/security/notices/USN-5359-1",
-            "https://www.debian.org/security/2022/dsa-5111",
-            "https://www.openwall.com/lists/oss-security/2022/03/24/1",
-            "https://www.openwall.com/lists/oss-security/2022/03/28/1",
-            "https://www.openwall.com/lists/oss-security/2022/03/28/3"
+            "https://access.redhat.com/security/cve/CVE-2022-1733",
+            "https://github.com/vim/vim/commit/60ae0e71490c97f2871a6344aca61cacf220f813",
+            "https://huntr.dev/bounties/6ff03b27-472b-4bef-a2bf-410fae65ff0a",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/BFAZTAT5CZC2R6KYDYA2HBAVEDSIX6MW/",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/IUPOLEX5GXC733HL4EFYMHFU7NISJJZG/",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/QKIX5HYKWXWG6QBCPPTPQ53GNOFHSAIS/",
+            "https://nvd.nist.gov/vuln/detail/CVE-2022-1733"
           ],
-          "PublishedDate": "2022-03-25T09:15:00Z",
-          "LastModifiedDate": "2022-04-29T09:15:00Z"
-        }
-      ]
-    },
-    {
-      "Target": "home/harbor/harbor_registryctl",
-      "Class": "lang-pkgs",
-      "Type": "gobinary",
-      "Vulnerabilities": [
-        {
-          "VulnerabilityID": "CVE-2019-16354",
-          "PkgName": "github.com/astaxie/beego",
-          "InstalledVersion": "v1.12.1",
-          "FixedVersion": "1.12.2-0.20200613154013-bac2b31afecc",
-          "Layer": {
-            "Digest": "sha256:c7602c3f6e2eeb335695bf8a61c80789e5e976061760f2ecb8275357103d24ac",
-            "DiffID": "sha256:8bd721a22c44d09303e7691e983e383c09961a5b3fc63dc3b6a33460526715b8"
-          },
-          "SeveritySource": "nvd",
-          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2019-16354",
-          "DataSource": {
-            "ID": "go-vulndb",
-            "Name": "The Go Vulnerability Database",
-            "URL": "https://github.com/golang/vulndb"
-          },
-          "Title": "Incorrect Permission Assignment for Critical Resource",
-          "Description": "The File Session Manager in Beego 1.10.0 allows local users to read session files because there is a race condition involving file creation within a directory with weak permissions.",
-          "Severity": "MEDIUM",
-          "CweIDs": [
-            "CWE-362"
-          ],
-          "CVSS": {
-            "nvd": {
-              "V2Vector": "AV:L/AC:M/Au:N/C:P/I:N/A:N",
-              "V3Vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:N/A:N",
-              "V2Score": 1.9,
-              "V3Score": 4.7
-            }
-          },
-          "References": [
-            "https://github.com/advisories/GHSA-f6px-w8rh-7r89",
-            "https://github.com/astaxie/beego/blob/develop/session/sess_file.go#L141",
-            "https://github.com/astaxie/beego/issues/3763",
-            "https://github.com/beego/beego/commit/bac2b31afecc65d9a89f9e473b8006c5edc0c8d1",
-            "https://github.com/beego/beego/issues/3763",
-            "https://github.com/beego/beego/pull/3975",
-            "https://github.com/beego/beego/pull/3975/commits/f99cbe0fa40936f2f8dd28e70620c559b6e5e2fd",
-            "https://nvd.nist.gov/vuln/detail/CVE-2019-16354",
-            "https://pkg.go.dev/vuln/GO-2021-0084"
-          ],
-          "PublishedDate": "2019-09-16T15:15:00Z",
-          "LastModifiedDate": "2021-07-21T11:39:00Z"
+          "PublishedDate": "2022-05-17T17:15:00Z",
+          "LastModifiedDate": "2022-05-26T00:25:00Z"
         },
         {
-          "VulnerabilityID": "CVE-2021-3538",
-          "PkgName": "github.com/satori/go.uuid",
-          "InstalledVersion": "v1.2.0",
-          "FixedVersion": "1.2.1-0.20181016170032-d91630c85102",
+          "VulnerabilityID": "CVE-2022-1735",
+          "PkgName": "vim-minimal",
+          "InstalledVersion": "2:8.0.1763-16.el8_5.13",
           "Layer": {
-            "Digest": "sha256:c7602c3f6e2eeb335695bf8a61c80789e5e976061760f2ecb8275357103d24ac",
-            "DiffID": "sha256:8bd721a22c44d09303e7691e983e383c09961a5b3fc63dc3b6a33460526715b8"
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
           },
-          "SeveritySource": "nvd",
-          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-3538",
-          "DataSource": {
-            "ID": "go-vulndb",
-            "Name": "The Go Vulnerability Database",
-            "URL": "https://github.com/golang/vulndb"
-          },
-          "Title": "satori/go.uuid: predictable UUIDs generated via insecure randomness",
-          "Description": "A flaw was found in github.com/satori/go.uuid in versions from commit 0ef6afb2f6cdd6cdaeee3885a95099c63f18fc8c to d91630c8510268e75203009fe7daf2b8e1d60c45. Due to insecure randomness in the g.rand.Read function the generated UUIDs are predictable for an attacker.",
-          "Severity": "CRITICAL",
+          "SeveritySource": "redhat",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-1735",
+          "Title": "vim: changing text in visual mode may cause invalid memory access that lead to a heap buffer overflow",
+          "Description": "Classic Buffer Overflow in GitHub repository vim/vim prior to 8.2.4969.",
+          "Severity": "LOW",
           "CweIDs": [
-            "CWE-338"
+            "CWE-120"
           ],
           "CVSS": {
             "nvd": {
-              "V2Vector": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
-              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-              "V2Score": 7.5,
-              "V3Score": 9.8
+              "V2Vector": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "V2Score": 6.8,
+              "V3Score": 7.8
             },
             "redhat": {
-              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-              "V3Score": 9.8
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 5.5
             }
           },
           "References": [
-            "https://access.redhat.com/security/cve/CVE-2021-3538",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=1954376",
-            "https://github.com/satori/go.uuid/commit/d91630c8510268e75203009fe7daf2b8e1d60c45",
-            "https://github.com/satori/go.uuid/issues/73",
-            "https://github.com/satori/go.uuid/pull/75",
-            "https://nvd.nist.gov/vuln/detail/CVE-2021-3538",
-            "https://pkg.go.dev/vuln/GO-2020-0018",
-            "https://snyk.io/vuln/SNYK-GOLANG-GITHUBCOMSATORIGOUUID-72488"
+            "https://access.redhat.com/security/cve/CVE-2022-1735",
+            "https://github.com/vim/vim/commit/7ce5b2b590256ce53d6af28c1d203fb3bc1d2d97",
+            "https://huntr.dev/bounties/c9f85608-ff11-48e4-933d-53d1759d44d9",
+            "https://nvd.nist.gov/vuln/detail/CVE-2022-1735"
           ],
-          "PublishedDate": "2021-06-02T14:15:00Z",
-          "LastModifiedDate": "2021-06-14T13:37:00Z"
+          "PublishedDate": "2022-05-17T19:15:00Z",
+          "LastModifiedDate": "2022-05-25T18:11:00Z"
         },
         {
-          "VulnerabilityID": "CVE-2022-27191",
-          "PkgName": "golang.org/x/crypto",
-          "InstalledVersion": "v0.0.0-20210921155107-089bfa567519",
-          "FixedVersion": "0.0.0-20220315160706-3147a52a75dd",
+          "VulnerabilityID": "CVE-2022-1769",
+          "PkgName": "vim-minimal",
+          "InstalledVersion": "2:8.0.1763-16.el8_5.13",
           "Layer": {
-            "Digest": "sha256:c7602c3f6e2eeb335695bf8a61c80789e5e976061760f2ecb8275357103d24ac",
-            "DiffID": "sha256:8bd721a22c44d09303e7691e983e383c09961a5b3fc63dc3b6a33460526715b8"
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
           },
-          "SeveritySource": "nvd",
-          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-27191",
-          "DataSource": {
-            "ID": "glad",
-            "Name": "GitLab Advisory Database Community",
-            "URL": "https://gitlab.com/gitlab-org/advisories-community"
-          },
-          "Title": "golang: crash in a golang.org/x/crypto/ssh server",
-          "Description": "The golang.org/x/crypto/ssh package before 0.0.0-20220314234659-1baeb1ce4c0b for Go allows an attacker to crash a server in certain circumstances involving AddHostKey.",
-          "Severity": "HIGH",
+          "SeveritySource": "redhat",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-1769",
+          "Title": "vim: buffer over-read in scriptfile.c",
+          "Description": "Buffer Over-read in GitHub repository vim/vim prior to 8.2.4974.",
+          "Severity": "LOW",
           "CweIDs": [
-            "CWE-327"
+            "CWE-125"
           ],
           "CVSS": {
             "nvd": {
-              "V2Vector": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
-              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-              "V2Score": 4.3,
-              "V3Score": 7.5
+              "V2Vector": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "V2Score": 4.6,
+              "V3Score": 7.8
             },
             "redhat": {
-              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-              "V3Score": 7.5
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 5.5
             }
           },
           "References": [
-            "https://access.redhat.com/security/cve/CVE-2022-27191",
-            "https://github.com/advisories/GHSA-8c26-wmh5-6g9v",
-            "https://groups.google.com/g/golang-announce",
-            "https://groups.google.com/g/golang-announce/c/-cp44ypCT5s",
-            "https://groups.google.com/g/golang-announce/c/-cp44ypCT5s/m/wmegxkLiAQAJ",
-            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/HHGBEGJ54DZZGTXFUQNS7ZIG3E624YAF/",
-            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/J5WPM42UR6XIBQNQPNQHM32X7S4LJTRX/",
-            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/QTFOIDHQRGNI4P6LYN6ILH5G443RYYKB/",
-            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/YHYRQB7TRMHDB3NEHW5XBRG7PPMUTPGV/",
-            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/ZQNPPQWSTP2IX7SHE6TS4SP4EVMI5EZK/",
-            "https://nvd.nist.gov/vuln/detail/CVE-2022-27191",
-            "https://security.netapp.com/advisory/ntap-20220429-0002/"
+            "https://access.redhat.com/security/cve/CVE-2022-1769",
+            "https://github.com/vim/vim/commit/4748c4bd64610cf943a431d215bb1aad51f8d0b4",
+            "https://huntr.dev/bounties/522076b2-96cb-4df6-a504-e6e2f64c171c",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/BFAZTAT5CZC2R6KYDYA2HBAVEDSIX6MW/",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/IUPOLEX5GXC733HL4EFYMHFU7NISJJZG/",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/QKIX5HYKWXWG6QBCPPTPQ53GNOFHSAIS/",
+            "https://nvd.nist.gov/vuln/detail/CVE-2022-1769"
           ],
-          "PublishedDate": "2022-03-18T07:15:00Z",
-          "LastModifiedDate": "2022-04-29T14:15:00Z"
+          "PublishedDate": "2022-05-17T17:15:00Z",
+          "LastModifiedDate": "2022-05-26T00:24:00Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2022-1771",
+          "PkgName": "vim-minimal",
+          "InstalledVersion": "2:8.0.1763-16.el8_5.13",
+          "Layer": {
+            "Digest": "sha256:4bb16177726caec64d3e9592403e6b642602b0b5b9c3ce3efeb9c00e117772ca",
+            "DiffID": "sha256:5bf135c4a0de07e52c11282c0954e3e6b7c7ddc6c8834a7fd2803c3dc6a31a69"
+          },
+          "SeveritySource": "redhat",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-1771",
+          "Title": "vim: recursive command line loop may cause a Stack-based Buffer Overflow",
+          "Description": "Uncontrolled Recursion in GitHub repository vim/vim prior to 8.2.4975.",
+          "Severity": "LOW",
+          "References": [
+            "https://access.redhat.com/security/cve/CVE-2022-1771",
+            "https://github.com/vim/vim/commit/51f0bfb88a3554ca2dde777d78a59880d1ee37a8",
+            "https://huntr.dev/bounties/faa74175-5317-4b71-a363-dfc39094ecbb"
+          ],
+          "PublishedDate": "2022-05-18T20:15:00Z",
+          "LastModifiedDate": "2022-05-20T10:15:00Z"
         }
       ]
     }

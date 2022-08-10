@@ -1,18 +1,18 @@
-resource "google_storage_bucket" "rackner_argo" {
-  name          = "rackner-argo"
-  location      = "US"
-  force_destroy = true
-  storage_class = "STANDARD"
+# resource "google_storage_bucket" "rackner_argo" {
+#   name          = "rackner-argo"
+#   location      = "US"
+#   force_destroy = true
+#   storage_class = "STANDARD"
 
-  lifecycle_rule {
-    condition {
-      age = 3
-    }
-    action {
-      type = "Delete"
-    }
-  }
-}
+#   lifecycle_rule {
+#     condition {
+#       age = 3
+#     }
+#     action {
+#       type = "Delete"
+#     }
+#   }
+# }
 
 resource "kubernetes_namespace" "argo" {
   metadata {
@@ -33,7 +33,7 @@ resource "helm_release" "argo_workflows" {
   namespace  = "argo"
   repository = "https://argoproj.github.io/argo-helm"
   chart      = "argo-workflows"
-  version    = "0.15.3"
+  version    = "0.16.8"
 
   values = [
     file("${path.module}/values.yaml")
